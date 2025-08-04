@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="nl" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabellen & Formulieren - Interactieve Gids</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- highlight.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    <div id="app" class="flex flex-col min-h-screen">
+        <!-- Header & Navigation -->
+        <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50 transition-colors duration-300">
+            <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center">
+                        <a href="index.html" class="font-bold text-xl text-blue-600 dark:text-blue-400">Interactieve Gids</a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-4">
+                        <a href="html-fundamentals.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">HTML Fundamenten</a>
+                        <a href="html5.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">HTML5</a>
+                        <a href="tables-forms.html" class="px-3 py-2 rounded-md text-sm font-medium bg-gray-200 dark:bg-gray-700 text-blue-600 dark:text-blue-400">Tabellen & Formulieren</a>
+                        <a href="css-basics.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">CSS Basis</a>
+                        <a href="css-layout.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">CSS Layout</a>
+                        <a href="bootstrap.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Bootstrap</a>
+                    </div>
+                    <div class="flex items-center">
+                        <button id="theme-toggle" class="p-2 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none">
+                            <svg id="theme-icon-light" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                            <svg id="theme-icon-dark" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+            <div class="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow-lg transition-colors duration-300">
+                <h1 class="text-3xl sm:text-4xl font-bold mb-2 text-blue-600 dark:text-blue-400">Tabellen & Formulieren</h1>
+                <p class="mb-8 text-lg text-gray-600 dark:text-gray-300">Structuur gegevens en verzamel gebruikersinvoer.</p>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-blue-500 pb-2">Hoofdstuk: HTML Forms & Tables</h2>
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-medium">43. Unit Goals</h3>
+                            <p>Het doel van deze unit is om te leren hoe je data structureert met tabellen en hoe je gebruikersinvoer verzamelt met formulieren.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">44. Introducing HTML Tables & 45. TR, TD, and TH</h3>
+                            <p>Tabellen (<code><table></code>) worden gebruikt om data in rijen (<code><tr></code>) en kolommen te structureren. Kopcellen (<code><th></code>) beschrijven een kolom, terwijl datacellen (<code><td></code>) de data bevatten.</p>
+                            <pre class="modern-code"><code class="language-html"><table border="1">
+  <tr>
+    <th>Voornaam</th>
+    <th>Achternaam</th>
+  </tr>
+  <tr>
+    <td>Jan</td>
+    <td>Janssen</td>
+  </tr>
+</table>
+</code></pre>
+                            <div class="space-y-4 mt-4">
+                                <p>HTML tables allow web developers to arrange data into rows and columns.</p>
+                                <h4 class="text-lg font-semibold pt-2">Define an HTML Table
+                                </h4>
+                                <p>A table in HTML consists of table cells inside rows and columns.</p>
+                                <pre class="modern-code"><code class="language-html"><table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>
+</code></pre>
+                                <h4 class="text-lg font-semibold pt-2">Table Cells</h4>
+                                <p>Each table cell is defined by a <code><td></code> and a <code></td></code> tag. <code>td</code> stands for table data. Everything between <code><td></code> and <code></td></code> is the content of a table cell.</p>
+                                <h4 class="text-lg font-semibold pt-2">Table Rows</h4>
+                                <p>Each table row starts with a <code><tr></code> and ends with a <code></tr></code> tag. <code>tr</code> stands for table row.</p>
+                                <h4 class="text-lg font-semibold pt-2">Table Headers</h4>
+                                <p>Sometimes you want your cells to be table header cells. In those cases use the <code><th></code> tag instead of the <code><td></code> tag. <code>th</code> stands for table header. By default, the text in <code><th></code> elements are bold and centered.</p>
+                                <pre class="modern-code"><code class="language-html"><table>
+  <tr>
+    <th>Person 1</th>
+    <th>Person 2</th>
+    <th>Person 3</th>
+  </tr>
+  <tr>
+    <td>Emil</td>
+    <td>Tobias</td>
+    <td>Linus</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>14</td>
+    <td>10</td>
+  </tr>
+</table>
+</code></pre>
+                                <h4 class="text-lg font-semibold pt-2">HTML Table Tags</h4>
+                                <div class="overflow-x-auto mt-2">
+                                    <table class="w-full text-left border-collapse modern-table">
+                                        <thead>
+                                            <tr>
+                                                <th class="border border-gray-400 dark:border-gray-500 px-4 py-2">Tag</th>
+                                                <th class="border border-gray-400 dark:border-gray-500 px-4 py-2">
+                                                    Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">
+                                                    <code><table></code>
+                                                </td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Defines a
+                                                    table</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">
+                                                    <code><th></code>
+                                                </td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Defines a
+                                                    header cell in a table</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">
+                                                    <code><tr></code>
+                                                </td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Defines a
+                                                    row in a table</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">
+                                                    <code><td></code>
+                                                </td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Defines a
+                                                    cell in a table</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">
+                                                    <code><caption></code>
+                                                </td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Defines a
+                                                    table caption</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">
+                                                    <code><colgroup></code>
+                                                </td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Specifies
+                                                    a group of one or more columns in a table for formatting</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">
+                                                    <code><col></code>
+                                                </td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Specifies
+                                                    column properties for each column within a <colgroup> element</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">
+                                                    <code><thead></code>
+                                                </td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Groups the
+                                                    header content in a table</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">
+                                                    <code><tbody></code>
+                                                </td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Groups the
+                                                    body content in a table</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">
+                                                    <code><tfoot></code>
+                                                </td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Groups the
+                                                    footer content in a table</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">46. Tables: Thead, Tbody, and Tfoot</h3>
+                            <p>Voor betere structuur kun je een tabel opdelen in <code><thead></code> (kop), <code><tbody></code> (body), en <code><tfoot></code> (voet).</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">47. Tables: Colspan & Rowspan</h3>
+                            <p>Met <code>colspan</code> kan een cel meerdere kolommen overspannen. Met <code>rowspan</code> kan een cel meerdere rijen overspannen.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">Codeeroefening 5: Table Practice Exercise</h3>
+                            <div class="mt-2 p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
+                                <h4 class="text-lg font-semibold">Opdracht:</h4>
+                                <p class="mt-2">Maak een tabel met drie kolommen: "Taal", "Maker", en "Jaar". Vul de tabel met minstens twee programmeertalen.</p>
+                                <ol class="list-decimal list-inside mt-2 space-y-1">
+                                    <li>Start met een <code><table></code> element.</li>
+                                    <li>Maak een koprij (<code><tr></code>) met drie kopcellen (<code><th></code>) voor de kolomtitels.</li>
+                                    <li>Maak voor elke programmeertaal een nieuwe rij (<code><tr></code>) met drie datacellen (<code><td></code>).</li>
+                                </ol>
+                                <h4 class="text-lg font-semibold mt-4">Code Oplossing:</h4>
+                                <pre class="modern-code"><code class="language-html"><!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Programmeertalen Tabel</title>
+</head>
+<body>
+    <h2>Bekende Programmeertalen</h2>
+    <table border="1">
+        <tr>
+            <th>Taal</th>
+            <th>Maker</th>
+            <th>Jaar</th>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Brendan Eich</td>
+            <td>1995</td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>Guido van Rossum</td>
+            <td>1991</td>
+        </tr>
+    </table>
+</body>
+</html>
+</code></pre>
+                                <h4 class="text-lg font-semibold mt-4">Live Voorbeeld:</h4>
+                                <div class="mt-2 p-4 border border-dashed border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50">
+                                    <h2>Bekende Programmeertalen</h2>
+                                    <table class="w-full text-left border-collapse modern-table">
+                                        <thead>
+                                            <tr>
+                                                <th class="border border-gray-400 dark:border-gray-500 px-4 py-2">Taal</th>
+                                                <th class="border border-gray-400 dark:border-gray-500 px-4 py-2">Maker</th>
+                                                <th class="border border-gray-400 dark:border-gray-500 px-4 py-2">Jaar</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">JavaScript</td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Brendan Eich</td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">1995</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Python</td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Guido van Rossum</td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">1991</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">48. The Form Element & 49. Common Input Types</h3>
+                            <p>Het <code><form></code> element is een container voor invoerelementen. Het <code><input></code> element is het meest veelzijdig, met types als <code>text</code>, <code>password</code>, <code>email</code>, <code>number</code>, <code>date</code>, etc.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">50. The All-Important Label</h3>
+                            <p>Het <code><label></code> element verbindt een beschrijving met een formulier-control via het <code>for</code>-attribuut, wat de toegankelijkheid verbetert.</p>
+                            <pre class="modern-code"><code class="language-html"><label for="username">Gebruikersnaam:</label>
+<input type="text" id="username" name="username">
+</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">51. HTML Buttons & 52. The Name Attribute</h3>
+                            <p>Een <code><button></code> of <code><input type="submit"></code> verzendt het formulier. Het <code>name</code>-attribuut op een input is essentieel om de data correct te kunnen identificeren op de server.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">53. "Hijacking" Google & Reddit's Search</h3>
+                            <p>Een leuke oefening waarbij je een formulier maakt dat de <code>action</code> en <code>name</code> attributen gebruikt om een zoekopdracht direct naar een externe zoekmachine te sturen.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">54. Radio Buttons, Checkboxes, & Selects</h3>
+                            <p>Gebruik radioknoppen (<code>type="radio"</code>) voor een enkele keuze uit een groep, selectievakjes (<code>type="checkbox"</code>) voor meerdere keuzes, en een dropdown-lijst (<code><select></code>) voor een compacte keuzelijst.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">55. Range & Text Area</h3>
+                            <p>Een <code><input type="range"></code> is een slider, en een <code><textarea></code> is voor invoer van meerdere regels tekst.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">Codeeroefening 6: Forms Practice Exercise</h3>
+                            <div class="mt-2 p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
+                                <h4 class="text-lg font-semibold">Opdracht:</h4>
+                                <p class="mt-2">Maak een eenvoudig loginformulier.</p>
+                                <ol class="list-decimal list-inside mt-2 space-y-1">
+                                    <li>Maak een <code><form></code>.</li>
+                                    <li>Voeg een invoerveld voor een gebruikersnaam toe. Gebruik een <code><label></code> en een <code><input type="text"></code>.</li>
+                                    <li>Voeg een invoerveld voor een wachtwoord toe. Gebruik een <code><label></code> en een <code><input type="password"></code>.</li>
+                                    <li>Voeg een <code><button></code> toe om het formulier te verzenden.</li>
+                                </ol>
+                                <h4 class="text-lg font-semibold mt-4">Code Oplossing:</h4>
+                                <pre class="modern-code"><code class="language-html"><!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Login Formulier</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form action="/login">
+        <div>
+            <label for="gebruiker">Gebruikersnaam:</label><br>
+            <input type="text" id="gebruiker" name="username">
+        </div>
+        <div>
+            <label for="wachtwoord">Wachtwoord:</label><br>
+            <input type="password" id="wachtwoord" name="password">
+        </div>
+        <br>
+        <button type="submit">Inloggen</button>
+    </form>
+</body>
+</html>
+</code></pre>
+                                <h4 class="text-lg font-semibold mt-4">Live Voorbeeld:</h4>
+                                <div class="mt-2 p-4 border border-dashed border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50">
+                                    <h2>Login</h2>
+                                    <form action="javascript:void(0);">
+                                        <div class="mb-2">
+                                            <label for="gebruiker-demo">Gebruikersnaam:</label><br>
+                                            <input type="text" id="gebruiker-demo" name="username" class="border rounded p-1 w-full max-w-xs bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600">
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="wachtwoord-demo">Wachtwoord:</label><br>
+                                            <input type="password" id="wachtwoord-demo" name="password" class="border rounded p-1 w-full max-w-xs bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600">
+                                        </div>
+                                        <br>
+                                        <button type="submit" class="bg-blue-500 text-white py-1 px-3 rounded hover:bg-blue-600">Inloggen</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">56. HTML5 Form Validations</h3>
+                            <p>Moderne browsers kunnen basisvalidatie uitvoeren met attributen zoals <code>required</code>, <code>minlength</code>, <code>pattern</code>, etc.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">57. Creating A Marathon Registration Form Intro & 58. Solution</h3>
+                            <p>Een project waarbij alle geleerde formulierconcepten worden gecombineerd om een volledig registratieformulier te bouwen.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-medium">HTML Table Borders</h3>
+                            <p>HTML tables can have borders of different styles and shapes.</p>
+
+                            <h4 class="text-lg font-semibold pt-2">How To Add a Border</h4>
+                            <p>To add a border, use the CSS <code>border</code> property on <code>table</code>, <code>th</code>, and <code>td</code> elements:</p>
+                            <pre class="modern-code"><code class="language-css">table, th, td {
+  border: 1px solid black;
+}</code></pre>
+
+                            <h4 class="text-lg font-semibold pt-2">Collapsed Table Borders</h4>
+                            <p>To avoid having double borders like in the example above, set the CSS <code>border-collapse</code> property to <code>collapse</code>.</p>
+                            <p>This will make the borders collapse into a single border:</p>
+                            <pre class="modern-code"><code class="language-css">table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}</code></pre>
+
+                            <h4 class="text-lg font-semibold pt-2">Style Table Borders</h4>
+                            <p>If you set a background color of each cell, and give the border a white color (the same as the document background), you get the impression of an invisible border:</p>
+                            <pre class="modern-code"><code class="language-css">table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+th, td {
+  background-color: #96D4D4;
+}</code></pre>
+
+                            <h4 class="text-lg font-semibold pt-2">Round Table Borders</h4>
+                            <p>With the <code>border-radius</code> property, the borders get rounded corners:</p>
+                            <pre class="modern-code"><code class="language-css">table, th, td {
+  border: 1px solid black;
+  border-radius: 10px;
+}</code></pre>
+                            <p>Skip the border around the table by leaving out <code>table</code> from the css selector:</p>
+                            <pre class="modern-code"><code class="language-css">th, td {
+  border: 1px solid black;
+  border-radius: 10px;
+}</code></pre>
+
+                            <h4 class="text-lg font-semibold pt-2">Dotted Table Borders</h4>
+                            <p>With the <code>border-style</code> property, you can set the appearance of the border.</p>
+                            <p>The following values are allowed:</p>
+                            <ul class="list-disc list-inside ml-4">
+                                <li><code>dotted</code></li>
+                                <li><code>dashed</code></li>
+                                <li><code>solid</code></li>
+                                <li><code>double</code></li>
+                                <li><code>groove</code></li>
+                                <li><code>ridge</code></li>
+                                <li><code>inset</code></li>
+                                <li><code>outset</code></li>
+                                <li><code>none</code></li>
+                                <li><code>hidden</code></li>
+                            </ul>
+                            <pre class="modern-code"><code class="language-css">th, td {
+  border-style: dotted;
+}</code></pre>
+
+                            <h4 class="text-lg font-semibold pt-2">Border Style Examples</h4>
+                            <p>Here are visual examples of each border style:</p>
+
+                            <div class="space-y-4 mt-4">
+                                <div>
+                                    <h5 class="text-md font-semibold">Dotted Border</h5>
+                                    <table class="w-full text-left border-collapse" style="border-collapse: collapse;">
+                                        <thead>
+                                            <tr>
+                                                <th style="border: 2px dotted #333; padding: 8px;">Header 1</th>
+                                                <th style="border: 2px dotted #333; padding: 8px;">Header 2</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="border: 2px dotted #333; padding: 8px;">Data 1</td>
+                                                <td style="border: 2px dotted #333; padding: 8px;">Data 2</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div>
+                                    <h5 class="text-md font-semibold">Dashed Border</h5>
+                                    <table class="w-full text-left border-collapse" style="border-collapse: collapse;">
+                                        <thead>
+                                            <tr>
+                                                <th style="border: 2px dashed #333; padding: 8px;">Header 1</th>
+                                                <th style="border: 2px dashed #333; padding: 8px;">Header 2</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="border: 2px dashed #333; padding: 8px;">Data 1</td>
+                                                <td style="border: 2px dashed #333; padding: 8px;">Data 2</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div>
+                                    <h5 class="text-md font-semibold">Solid Border</h5>
+                                    <table class="w-full text-left border-collapse" style="border-collapse: collapse;">
+                                        <thead>
+                                            <tr>
+                                                <th style="border: 2px solid #333; padding: 8px;">Header 1</th>
+                                                <th style="border: 2px solid #333; padding: 8px;">Header 2</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="border: 2px solid #333; padding: 8px;">Data 1</td>
+                                                <td style="border: 2px solid #333; padding: 8px;">Data 2</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div>
+                                    <h5 class="text-md font-semibold">Double Border</h5>
+                                    <table class="w-full text-left border-collapse" style="border-collapse: collapse;">
+                                        <thead>
+                                            <tr>
+                                                <th style="border: 3px double #333; padding: 8px;">Header 1</th>
+                                                <th style="border: 3px double #333; padding: 8px;">Header 2</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="border: 3px double #333; padding: 8px;">Data 1</td>
+                                                <td style="border: 3px double #333; padding: 8px;">Data 2</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div>
+                                    <h5 class="text-md font-semibold">Groove Border</h5>
+                                    <table class="w-full text-left border-collapse" style="border-collapse: collapse;">
+                                        <thead>
+                                            <tr>
+                                                <th style="border: 3px groove #333; padding: 8px;">Header 1</th>
+                                                <th style="border: 3px groove #333; padding: 8px;">Header 2</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="border: 3px groove #333; padding: 8px;">Data 1</td>
+                                                <td style="border: 3px groove #333; padding: 8px;">Data 2</td>
+                                            </tr>

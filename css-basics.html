@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="nl" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basis - Interactieve Gids</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- highlight.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    <div id="app" class="flex flex-col min-h-screen">
+        <!-- Header & Navigation -->
+        <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50 transition-colors duration-300">
+            <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center">
+                        <a href="index.html" class="font-bold text-xl text-blue-600 dark:text-blue-400">Interactieve Gids</a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-4">
+                        <a href="html-fundamentals.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">HTML Fundamenten</a>
+                        <a href="html5.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">HTML5</a>
+                        <a href="tables-forms.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Tabellen & Formulieren</a>
+                        <a href="css-basics.html" class="px-3 py-2 rounded-md text-sm font-medium bg-gray-200 dark:bg-gray-700 text-green-600 dark:text-green-400">CSS Basis</a>
+                        <a href="css-layout.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">CSS Layout</a>
+                        <a href="bootstrap.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Bootstrap</a>
+                    </div>
+                    <div class="flex items-center">
+                        <button id="theme-toggle" class="p-2 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none">
+                            <svg id="theme-icon-light" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                            <svg id="theme-icon-dark" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+            <div class="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow-lg transition-colors duration-300">
+                <h1 class="text-3xl sm:text-4xl font-bold mb-2 text-green-600 dark:text-green-400">CSS Basis</h1>
+                <p class="mb-8 text-lg text-gray-600 dark:text-gray-300">De kunst van het stijlen en opmaken van webpagina's.</p>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-green-500 pb-2">Hoofdstuk: Begin van CSS</h2>
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-medium">60. What is CSS?</h3>
+                            <p>CSS staat voor Cascading Style Sheets. Het is de taal die we gebruiken om de presentatie en layout van een webpagina te stijlen. Met CSS bepaal je kleuren, lettertypen, afstanden, afmetingen en nog veel meer. Het "Cascading"-gedeelte is belangrijk: het verwijst naar de manier waarop stijlen worden toegepast en conflicten worden opgelost wanneer meerdere regels hetzelfde element targeten.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">62. Including Styles Correctly</h3>
+                            <p>Er zijn drie manieren om CSS aan een HTML-document toe te voegen:</p>
+                            <ul class="list-disc list-inside ml-4 space-y-2">
+                                <li><b>External CSS:</b> Een apart <code>.css</code>-bestand, gelinkt via de <code><link></code>-tag in de <code><head></code>. Dit is de aanbevolen methode omdat het de content (HTML) en presentatie (CSS) scheidt, wat leidt tot schonere code, gemakkelijker onderhoud en betere prestaties door caching.</li>
+                                <li><b>Internal CSS:</b> CSS-regels binnen een <code><style></code>-tag in de <code><head></code> van het HTML-document. Handig voor pagina-specifieke stijlen of voor kleine projecten.</li>
+                                <li><b>Inline CSS:</b> Stijlen direct toegepast op een HTML-element met het <code>style</code>-attribuut. Dit wordt meestal afgeraden omdat het de scheiding van content en presentatie doorbreekt en moeilijk te onderhouden is.</li>
+                            </ul>
+                            <pre class="modern-code"><code class="language-html"><!-- 1. External CSS -->
+<link rel="stylesheet" href="styles.css">
+
+<!-- 2. Internal CSS -->
+<style>
+  body {
+    background-color: #f0f0f0;
+  }
+</style>
+
+<!-- 3. Inline CSS -->
+<p style="color: blue;">Deze tekst is blauw.</p>
+</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">63-65. Color Systems: Named, RGB, & Hexadecimal</h3>
+                            <p>Kleuren in CSS kunnen op verschillende manieren worden gedefinieerd: via benoemde kleuren, RGB(A) en Hexadecimale codes. Naast deze systemen bestaat ook HSL (Hue, Saturation, Lightness), wat vaak intuïtiever is om mee te werken. De 'A' in RGBA en HSLA staat voor Alpha en regelt de transparantie (van 0.0 voor volledig transparant tot 1.0 voor volledig dekkend).</p>
+                            <pre class="modern-code"><code class="language-css">/* Named Color (makkelijk leesbaar, beperkte keuze) */
+h1 {
+  color: dodgerblue;
+}
+
+/* RGB (Red, Green, Blue: waarden van 0-255) */
+p {
+  color: rgb(100, 150, 200);
+}
+
+/* RGBA (met transparantie) */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* 50% doorzichtig zwart */
+}
+
+/* Hexadecimal (meest gebruikt) */
+body {
+  background-color: #333333; /* #333 is een shorthand */
+}
+</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">67-69. Common Text & Font Properties</h3>
+                            <p>Met CSS heb je volledige controle over de typografie van je pagina. Naast <code>font-family</code> en <code>font-size</code>, zijn <code>font-weight</code> (dikte), <code>text-align</code> (uitlijning), en <code>line-height</code> (regelafstand) essentieel voor leesbaarheid. Andere nuttige eigenschappen zijn <code>text-transform</code> om tekst in hoofdletters of kleine letters te zetten, en <code>letter-spacing</code> of <code>word-spacing</code> om de ruimte tussen letters of woorden aan te passen.</p>
+                            <pre class="modern-code"><code class="language-css">.my-text {
+  font-family: "Arial", sans-serif; /* Fallback lettertype */
+  font-size: 16px; /* Grootte in pixels */
+  font-weight: bold; /* bold, normal, 700, etc. */
+  text-align: center; /* left, right, justify */
+  text-decoration: underline; /* none, overline, line-through */
+  text-transform: uppercase; /* Maakt tekst HOOFDLETTERS */
+  line-height: 1.6; /* Regelafstand */
+}
+</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-green-500 pb-2">Hoofdstuk: The world of CSS Selectors</h2>
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-medium">71-73. Basic Selectors (Universal, Element, ID, Class)</h3>
+                            <p>Selectors worden gebruikt om de HTML-elementen te 'selecteren' die je wilt stijlen. De universele selector (<code>*</code>) is handig voor het toepassen van basis-resets. De element-selector (bv. <code>p</code>) is goed voor algemene stijlen. De ID-selector (<code>#id-naam</code>) is bedoeld voor één uniek element per pagina, terwijl de class-selector (<code>.class-naam</code>) is ontworpen om hergebruikt te worden op meerdere elementen die dezelfde stijl moeten delen.</p>
+                            <pre class="modern-code"><code class="language-css">/* Universal Selector (selecteert alles) */
+* {
+  box-sizing: border-box;
+}
+
+/* Element Selector (selecteert alle p tags) */
+p {
+  color: #555;
+}
+
+/* ID Selector (selecteert het element met id="logo") */
+#logo {
+  border: 1px solid black;
+}
+
+/* Class Selector (selecteert alle elementen met class="highlight") */
+.highlight {
+  background-color: yellow;
+}
+</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">74-76. Combinator & Attribute Selectors</h3>
+                            <p>Combineer selectors om specifieker te zijn, of selecteer op basis van attributen. Combinators bepalen de relatie tussen selectors. De descendant selector (spatie) is de meest voorkomende. De child selector (<code>></code>) is specifieker en selecteert alleen directe kinderen. Attribuutselectors zijn zeer krachtig en kunnen elementen selecteren op basis van de aanwezigheid, exacte waarde of zelfs een deel van de waarde van een attribuut.</p>
+                            <pre class="modern-code"><code class="language-css">/* Descendant Selector (selecteert alle p binnen een article) */
+article p {
+  font-style: italic;
+}
+
+/* Direct Child Selector (selecteert li die een direct kind is van ul) */
+ul > li {
+  list-style-type: square;
+}
+
+/* Adjacent Sibling Selector (selecteert de p direct na een h1) */
+h1 + p {
+  margin-top: 0;
+}
+
+/* Attribute Selector (selecteert alle input met type="text") */
+input[type="text"] {
+  border: 1px solid gray;
+}
+</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">77-78. Pseudo-Classes & Pseudo-Elements</h3>
+                            <p>Pseudo-classes selecteren elementen in een speciale staat (zoals <code>:hover</code>, <code>:focus</code> voor formuliervelden, of <code>:first-child</code>). Pseudo-elementen stijlen een specifiek deel van een element (zoals <code>::first-letter</code>) of voegen content toe die niet in de HTML staat (zoals <code>::before</code> en <code>::after</code>). Deze zijn uiterst nuttig voor UI-feedback en decoratieve effecten zonder extra HTML te hoeven toevoegen.</p>
+                            <pre class="modern-code"><code class="language-css">/* Pseudo-class: stijl een link als de muis eroverheen is */
+a:hover {
+  color: red;
+}
+
+/* Pseudo-class: stijl elk tweede kind-element in een lijst */
+li:nth-child(even) {
+  background-color: #eee;
+}
+
+/* Pseudo-element: stijl de eerste letter van elke paragraaf */
+p::first-letter {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* Pseudo-element: voeg content toe vóór een element */
+.important::before {
+  content: "⚠️ ";
+}
+</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">79-83. Cascade, Specificity & Inheritance</h3>
+                            <p>De <b>Cascade</b> bepaalt welke CSS-regel wordt toegepast als er conflicten zijn. <b>Specificity</b> is een weging die de browser toekent aan een CSS-regel om te beslissen welke regel voorrang krijgt (een ID is specifieker dan een klasse, die weer specifieker is dan een element). <b>Inheritance</b> betekent dat sommige CSS-eigenschappen (typografische zoals <code>color</code>, <code>font-family</code>) van een parent-element worden doorgegeven aan de child-elementen. Het <code>!important</code>-statement doorbreekt de cascade en moet alleen als laatste redmiddel gebruikt worden, omdat het de voorspelbaarheid van je CSS kan verstoren.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white dark:bg-gray-800 shadow-inner mt-auto transition-colors duration-300">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center text-gray-600 dark:text-gray-400 text-sm">
+                &copy; 2024 Interactieve Gids. Gemaakt met ❤️.
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme switcher logic
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeIconLight = document.getElementById('theme-icon-light');
+            const themeIconDark = document.getElementById('theme-icon-dark');
+            
+            // Apply syntax highlighting
+            hljs.highlightAll();
+            
+            const applyTheme = (theme) => {
+                if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.classList.remove('light');
+                    themeIconLight.classList.add('hidden');
+                    themeIconDark.classList.remove('hidden');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.classList.add('light');
+                    themeIconLight.classList.remove('hidden');
+                    themeIconDark.classList.add('hidden');
+                }
+                // Store theme preference
+                localStorage.setItem('theme', theme);
+            };
+            
+            const toggleTheme = () => {
+                const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                applyTheme(newTheme);
+            };
+            
+            themeToggleBtn.addEventListener('click', toggleTheme);
+            
+            // Apply saved theme or system preference
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                applyTheme(savedTheme);
+            } else {
+                // Check system preference
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    applyTheme('dark');
+                } else {
+                    applyTheme('light');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

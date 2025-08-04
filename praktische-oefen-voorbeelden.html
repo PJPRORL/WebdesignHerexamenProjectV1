@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Praktische Oefen Voorbeelden - Interactieve Gids</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- highlight.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    <div id="app" class="flex flex-col min-h-screen">
+        <!-- Header & Navigation -->
+        <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50 transition-colors duration-300">
+            <nav class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+                <div class="flex items-center space-x-6">
+                    <a href="index.html" class="font-bold text-xl text-blue-600 dark:text-blue-400">Interactieve Gids</a>
+                    <a href="praktische-oefen-voorbeelden.html" class="text-gray-700 dark:text-gray-300 hover:underline font-medium">Praktische Oefen Voorbeelden</a>
+                </div>
+                <div>
+                    <button id="theme-toggle" class="p-2 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none" aria-label="Toggle theme">
+                        <svg id="theme-icon-light" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        <svg id="theme-icon-dark" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+            <div class="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow-lg transition-colors duration-300">
+                <h1 class="text-3xl sm:text-4xl font-bold mb-6 text-center text-blue-600 dark:text-blue-400">Praktische Oefen Voorbeelden</h1>
+
+                <!-- Oefening 1: Pangolin Practice -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-blue-500 pb-2">Codeeroefening 1: Pangolin Practice</h2>
+                    <div class="space-y-6">
+                        <p>Maak een eenvoudige pagina over het schubdier (pangolin). De pagina moet een hoofdtitel, een subtitel en twee paragrafen bevatten.</p>
+                        <ol class="list-decimal list-inside">
+                            <li>Gebruik een <code><h1></code> voor de hoofdtitel: "Het Schubdier".</li>
+                            <li>Gebruik een <code><h2></code> voor een subtitel: "Een uniek zoogdier".</li>
+                            <li>Voeg een eerste paragraaf (<code><p></code>) toe met een korte beschrijving van het dier.</li>
+                            <li>Voeg een tweede paragraaf (<code><p></code>) toe over waarom ze bedreigd zijn.</li>
+                        </ol>
+                        <h3 class="text-xl font-semibold">Code Oplossing:</h3>
+                        <pre class="modern-code"><code class="language-html"><h1>Het Schubdier</h1>
+<h2>Een uniek zoogdier</h2>
+<p>Het schubdier, ook wel pangolin genoemd, is het enige zoogdier dat volledig bedekt is met schubben. Ze gebruiken deze schubben als bescherming tegen roofdieren.</p>
+<p>Helaas zijn schubdieren een van de meest verhandelde dieren ter wereld, wat hen ernstig met uitsterven bedreigt.</p>
+</code></pre>
+                        <h3 class="text-xl font-semibold">Live Voorbeeld:</h3>
+                        <div class="p-4 border border-dashed border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50">
+                            <h1>Het Schubdier</h1>
+                            <h2>Een uniek zoogdier</h2>
+                            <p>Het schubdier, ook wel pangolin genoemd, is het enige zoogdier dat volledig bedekt is met schubben. Ze gebruiken deze schubben als bescherming tegen roofdieren.</p>
+                            <p>Helaas zijn schubdieren een van de meest verhandelde dieren ter wereld, wat hen ernstig met uitsterven bedreigt.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Oefening 2: Favorite Movies -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-blue-500 pb-2">Codeeroefening 2: Favorite Movies Exercises</h2>
+                    <div class="space-y-6">
+                        <p>Maak een pagina met een top 3 van je favoriete films. De pagina moet een titel en een genummerde lijst bevatten.</p>
+                        <ol class="list-decimal list-inside">
+                            <li>Gebruik een <code><h1></code> voor de titel: "Mijn Top 3 Films".</li>
+                            <li>Maak een geordende lijst (<code><ol></code>) onder de titel.</li>
+                            <li>Voeg drie films toe aan de lijst, elk als een apart lijstitem (<code><li></code>).</li>
+                        </ol>
+                        <h3 class="text-xl font-semibold">Code Oplossing:</h3>
+                        <pre class="modern-code"><code class="language-html"><!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Favoriete Films</title>
+</head>
+<body>
+    <h1>Mijn Top 3 Films</h1>
+    <ol>
+        <li>The Lord of the Rings: The Fellowship of the Ring</li>
+        <li>Pulp Fiction</li>
+        <li>The Dark Knight</li>
+    </ol>
+</body>
+</html>
+</code></pre>
+                        <h3 class="text-xl font-semibold">Live Voorbeeld:</h3>
+                        <div class="p-4 border border-dashed border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50">
+                            <h1>Mijn Top 3 Films</h1>
+                            <ol>
+                                <li>The Lord of the Rings: The Fellowship of the Ring</li>
+                                <li>Pulp Fiction</li>
+                                <li>The Dark Knight</li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Oefening 3: Wolf Images & Links -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-blue-500 pb-2">Codeeroefening 3: Wolf Images & Links Exercise</h2>
+                    <div class="space-y-6">
+                        <p>Maak een kleine webpagina over wolven. De pagina moet de volgende elementen bevatten:</p>
+                        <ol class="list-decimal list-inside">
+                            <li>Een hoofdtitel (<code><h1></code>) met de tekst "De Grijze Wolf".</li>
+                            <li>Een afbeelding van een wolf. Zorg voor een duidelijke <code>alt</code>-tekst.</li>
+                            <li>Onder de afbeelding, een paragraaf (<code><p></code>) met een link (<code><a></code>) naar de Wikipedia-pagina over de Grijze Wolf.</li>
+                            <li>De link moet in een nieuw tabblad openen.</li>
+                        </ol>
+                        <h3 class="text-xl font-semibold">Code Oplossing:</h3>
+                        <pre class="modern-code"><code class="language-html"><!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Oefening: Wolven</title>
+</head>
+<body>
+    <h1>De Grijze Wolf</h1>
+    <img 
+        src="https://placehold.co/600x400/718096/FFFFFF?text=Afbeelding+van+een+wolf" 
+        alt="Een grijze wolf die in de camera kijkt"
+        width="600"
+    >
+    <p>
+        Lees meer over de Grijze Wolf op 
+        <a href="https://nl.wikipedia.org/wiki/Wolf_(dier)" target="_blank">
+            Wikipedia
+        </a>.
+    </p>
+</body>
+</html>
+</code></pre>
+                        <h3 class="text-xl font-semibold">Live Voorbeeld:</h3>
+                        <div class="p-4 border border-dashed border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50">
+                            <h1>De Grijze Wolf</h1>
+                            <img src="https://placehold.co/600x400/718096/FFFFFF?text=Afbeelding+van+een+wolf" alt="Een grijze wolf die in de camera kijkt" class="max-w-full h-auto" />
+                            <p>
+                                Lees meer over de Grijze Wolf op
+                                <a href="https://nl.wikipedia.org/wiki/Wolf_(dier)" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                    Wikipedia
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Oefening 4: Snowman Logo -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-blue-500 pb-2">Codeeroefening 4: Snowman Logo Exercise</h2>
+                    <div class="space-y-6">
+                        <p>Gebruik HTML entity codes om een eenvoudig logo te maken voor een fictief bedrijf genaamd "Frosty Creations".</p>
+                        <ol class="list-decimal list-inside">
+                            <li>Maak een hoofdtitel (<code><h1></code>).</li>
+                            <li>Plaats de tekst "Frosty Creations" in de titel.</li>
+                            <li>Voeg direct na de tekst de HTML entity code voor een sneeuwpop (<code>&amp;#9924;</code>) toe.</li>
+                            <li>Voeg daaronder een paragraaf toe met de tekst "Copyright © 2024". Gebruik de juiste entity code voor het copyrightsymbool.</li>
+                        </ol>
+                        <h3 class="text-xl font-semibold">Code Oplossing:</h3>
+                        <pre class="modern-code"><code class="language-html"><!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Frosty Creations</title>
+</head>
+<body>
+    <h1>Frosty Creations &amp;#9924;</h1>
+    <p>Copyright &amp;copy; 2024</p>
+</body>
+</html>
+</code></pre>
+                        <h3 class="text-xl font-semibold">Live Voorbeeld:</h3>
+                        <div class="p-4 border border-dashed border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50">
+                            <h1>Frosty Creations &#9924;</h1>
+                            <p>Copyright &copy; 2024</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Oefening 5: Table Practice -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-blue-500 pb-2">Codeeroefening 5: Table Practice Exercise</h2>
+                    <div class="space-y-6">
+                        <p>Maak een tabel met drie kolommen: "Taal", "Maker", en "Jaar". Vul de tabel met minstens twee programmeertalen.</p>
+                        <ol class="list-decimal list-inside">
+                            <li>Start met een <code><table></code> element.</li>
+                            <li>Maak een koprij (<code><tr></code>) met drie kopcellen (<code><th></code>) voor de kolomtitels.</li>
+                            <li>Maak voor elke programmeertaal een nieuwe rij (<code><tr></code>) met drie datacellen (<code><td></code>).</li>
+                        </ol>
+                        <h3 class="text-xl font-semibold">Code Oplossing:</h3>
+                        <pre class="modern-code"><code class="language-html"><!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Programmeertalen Tabel</title>
+</head>
+<body>
+    <h2>Bekende Programmeertalen</h2>
+    <table border="1">
+        <tr>
+            <th>Taal</th>
+            <th>Maker</th>
+            <th>Jaar</th>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Brendan Eich</td>
+            <td>1995</td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>Guido van Rossum</td>
+            <td>1991</td>
+        </tr>
+    </table>
+</body>
+</html>
+</code></pre>
+                        <h3 class="text-xl font-semibold">Live Voorbeeld:</h3>
+                        <div class="p-4 border border-dashed border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50">
+                            <h2>Bekende Programmeertalen</h2>
+                            <table class="w-full text-left border-collapse modern-table">
+                                <thead>
+                                    <tr>
+                                        <th class="border border-gray-400 dark:border-gray-500 px-4 py-2">Taal</th>
+                                        <th class="border border-gray-400 dark:border-gray-500 px-4 py-2">Maker</th>
+                                        <th class="border border-gray-400 dark:border-gray-500 px-4 py-2">Jaar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">JavaScript</td>
+                                        <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Brendan Eich</td>
+                                        <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">1995</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Python</td>
+                                        <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Guido van Rossum</td>
+                                        <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">1991</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Oefening 6: Forms Practice -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-blue-500 pb-2">Codeeroefening 6: Forms Practice Exercise</h2>
+                    <div class="space-y-6">
+                        <p>Maak een eenvoudig loginformulier.</p>
+                        <ol class="list-decimal list-inside">
+                            <li>Maak een <code><form></code>.</li>
+                            <li>Voeg een invoerveld voor een gebruikersnaam toe. Gebruik een <code><label></code> en een <code><input type="text"></code>.</li>
+                            <li>Voeg een invoerveld voor een wachtwoord toe. Gebruik een <code><label></code> en een <code><input type="password"></code>.</li>
+                            <li>Voeg een <code><button></code> toe om het formulier te verzenden.</li>
+                        </ol>
+                        <h3 class="text-xl font-semibold">Code Oplossing:</h3>
+                        <pre class="modern-code"><code class="language-html"><!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Login Formulier</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form action="/login">
+        <div>
+            <label for="gebruiker">Gebruikersnaam:</label><br>
+            <input type="text" id="gebruiker" name="username">
+        </div>
+        <div>
+            <label for="wachtwoord">Wachtwoord:</label><br>
+            <input type="password" id="wachtwoord" name="password">
+        </div>
+        <br>
+        <button type="submit">Inloggen</button>
+    </form>
+</body>
+</html>
+</code></pre>
+                        <h3 class="text-xl font-semibold">Live Voorbeeld:</h3>
+                        <div class="p-4 border border-dashed border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50">
+                            <h2>Login</h2>
+                            <form action="javascript:void(0);">
+                                <div class="mb-2">
+                                    <label for="gebruiker-demo">Gebruikersnaam:</label><br>
+                                    <input type="text" id="gebruiker-demo" name="username" class="border rounded p-1 w-full max-w-xs bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600" />
+                                </div>
+                                <div class="mb-2">
+                                    <label for="wachtwoord-demo">Wachtwoord:</label><br>
+                                    <input type="password" id="wachtwoord-demo" name="password" class="border rounded p-1 w-full max-w-xs bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600" />
+                                </div>
+                                <br />
+                                <button type="submit" class="bg-blue-500 text-white py-1 px-3 rounded hover:bg-blue-600">Inloggen</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white dark:bg-gray-800 shadow-inner mt-auto transition-colors duration-300">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center text-gray-600 dark:text-gray-400 text-sm">
+                &copy; 2024 Interactieve Gids. Gemaakt met ❤️.
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Elements ---
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeIconLight = document.getElementById('theme-icon-light');
+            const themeIconDark = document.getElementById('theme-icon-dark');
+            const mainContent = document.getElementById('main-content');
+            const navHtml = document.getElementById('nav-html');
+            const navCss = document.getElementById('nav-css');
+            const navMobileHtml = document.getElementById('nav-mobile-html');
+            const navMobileCss = document.getElementById('nav-mobile-css');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // --- Theme Switcher Logic ---
+            const applyTheme = (theme) => {
+                if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.classList.remove('light');
+                    if (themeIconLight) themeIconLight.classList.add('hidden');
+                    if (themeIconDark) themeIconDark.classList.remove('hidden');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.classList.add('light');
+                    if (themeIconLight) themeIconLight.classList.remove('hidden');
+                    if (themeIconDark) themeIconDark.classList.add('hidden');
+                }
+            };
+
+            const toggleTheme = () => {
+                const currentTheme = localStorage.getItem('theme') || 'light';
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                localStorage.setItem('theme', newTheme);
+                applyTheme(newTheme);
+            };
+
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', toggleTheme);
+            }
+
+            // --- Page Loader Logic ---
+            const setActiveLink = (pageId) => {
+                const links = [navHtml, navCss, navMobileHtml, navMobileCss];
+                links.forEach(link => {
+                    if (link) {
+                        link.classList.remove('bg-gray-200', 'dark:bg-gray-700', 'text-blue-600', 'dark:text-blue-400', 'text-green-600', 'dark:text-green-400');
+                    }
+                });
+
+                if (pageId === 'html' && navHtml && navMobileHtml) {
+                    navHtml.classList.add('bg-gray-200', 'dark:bg-gray-700', 'text-blue-600', 'dark:text-blue-400');
+                    navMobileHtml.classList.add('bg-gray-200', 'dark:bg-gray-700');
+                } else if (pageId === 'css' && navCss && navMobileCss) {
+                    navCss.classList.add('bg-gray-200', 'dark:bg-gray-700', 'text-green-600', 'dark:text-green-400');
+                    navMobileCss.classList.add('bg-gray-200', 'dark:bg-gray-700');
+                }
+            };
+
+            const loadPage = (pageId) => {
+                const template = document.getElementById(`page-${pageId}`);
+                if (template && mainContent) {
+                    mainContent.innerHTML = ''; // Clear previous content
+                    const content = template.content.cloneNode(true);
+                    mainContent.appendChild(content);
+                    // After content is loaded, apply syntax highlighting
+                    hljs.highlightAll();
+                    setActiveLink(pageId);
+                    window.scrollTo(0, 0); // Scroll to top
+
+                    // Close mobile menu after navigation
+                    if (mobileMenu) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            };
+
+            if (navHtml) navHtml.addEventListener('click', (e) => { e.preventDefault(); loadPage('html'); });
+            if (navCss) navCss.addEventListener('click', (e) => { e.preventDefault(); loadPage('css'); });
+            if (navMobileHtml) navMobileHtml.addEventListener('click', (e) => { e.preventDefault(); loadPage('html'); });
+            if (navMobileCss) navMobileCss.addEventListener('click', (e) => { e.preventDefault(); loadPage('css'); });
+
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', () => {
+                    if (mobileMenu) {
+                        mobileMenu.classList.toggle('hidden');
+                    }
+                });
+            }
+
+            // --- Initial Load ---
+            const initialTheme = localStorage.getItem('theme');
+            if (initialTheme) {
+                applyTheme(initialTheme);
+            } else {
+                // Check system preference if no theme is set
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    applyTheme('dark');
+                } else {
+                    applyTheme('light');
+                }
+            }
+
+            loadPage('html'); // Load HTML page by default
+        });
+    </script>
+</body>
+
+</html>

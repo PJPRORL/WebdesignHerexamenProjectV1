@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="nl" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Fundamenten - Interactieve Gids</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- highlight.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    <div id="app" class="flex flex-col min-h-screen">
+        <!-- Header & Navigation -->
+        <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50 transition-colors duration-300">
+            <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center">
+                        <a href="index.html" class="font-bold text-xl text-blue-600 dark:text-blue-400">Interactieve Gids</a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-4">
+                        <a href="html-fundamentals.html" class="px-3 py-2 rounded-md text-sm font-medium bg-gray-200 dark:bg-gray-700 text-blue-600 dark:text-blue-400">HTML Fundamenten</a>
+                        <a href="html5.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">HTML5</a>
+                        <a href="tables-forms.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Tabellen & Formulieren</a>
+                        <a href="css-basics.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">CSS Basis</a>
+                        <a href="css-layout.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">CSS Layout</a>
+                        <a href="bootstrap.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Bootstrap</a>
+                    </div>
+                    <div class="flex items-center">
+                        <button id="theme-toggle" class="p-2 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none">
+                            <svg id="theme-icon-light" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                            <svg id="theme-icon-dark" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+            <div class="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow-lg transition-colors duration-300">
+                <h1 class="text-3xl sm:text-4xl font-bold mb-2 text-blue-600 dark:text-blue-400">Deel 1: HTML Fundamenten</h1>
+                <p class="mb-8 text-lg text-gray-600 dark:text-gray-300">De fundamentele bouwsteen van het web.</p>
+
+                <!-- Chapter: HTML: The Essentials -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-blue-500 pb-2">Hoofdstuk: HTML: The Essentials</h2>
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-medium">1. Welcome To The Course! & 21. Introduction to HTML</h3>
+                            <p>Welkom! <strong>HTML</strong> staat voor <strong>Hyper Text Markup Language</strong>. Het is de ruggengraat van vrijwel elke webpagina. Het is geen programmeertaal, maar een <strong>opmaaktaal</strong> die de structuur en de betekenis van de inhoud op een webpagina definieert met behulp van elementen en tags. "HyperText" verwijst naar de links die webpagina's met elkaar verbinden, terwijl "Markup" verwijst naar de tags die je gebruikt om inhoud te "markeren".</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">22. Our Very First HTML Page</h3>
+                            <p>Elk HTML-document volgt een vaste, hiërarchische structuur. Dit is de minimale "boilerplate" die je nodig hebt om te starten.</p>
+                            <pre class="modern-code"><code class="language-html"><!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Paginatitel</title>
+</head>
+<body>
+    <h1>Mijn Belangrijkste Kop</h1>
+    <p>Mijn eerste paragraaf met tekst.</p>
+</body>
+</html>
+</code></pre>
+                            <p class="mt-2">De <code><!DOCTYPE html></code>-declaratie vertelt de browser dat het een HTML5-document is. De <code><html></code>-tag is de root van de pagina. De <code><head></code> bevat meta-informatie (zoals de <code><title></code>), en de <code><body></code> bevat de zichtbare content.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-medium">HTML Elements</h3>
+                            <p>Een HTML-element wordt gedefinieerd door een start-tag, wat inhoud, en een eind-tag. Het HTML-element is alles van de start-tag tot de eind-tag:</p>
+                            <p class="my-2"><code><tagname>Content goes here...</tagname></code></p>
+                            <p>Voorbeelden van enkele HTML-elementen:</p>
+                            <pre class="modern-code"><code class="language-html"><h1>My First Heading</h1>
+<p>My first paragraph.</p>
+</code></pre>
+                            <div class="overflow-x-auto mt-2">
+                                <table class="w-full text-left border-collapse modern-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="border border-gray-400 dark:border-gray-500 px-4 py-2">Start tag</th>
+                                            <th class="border border-gray-400 dark:border-gray-500 px-4 py-2">Element content</th>
+                                            <th class="border border-gray-400 dark:border-gray-500 px-4 py-2">End tag</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border border-gray-400 dark:border-gray-500 px-4 py-2"><code><h1></code></td>
+                                            <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">My First Heading</td>
+                                            <td class="border border-gray-400 dark:border-gray-500 px-4 py-2"><code></h1></code></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-400 dark:border-gray-500 px-4 py-2"><code><p></code></td>
+                                            <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">My first paragraph.</td>
+                                            <td class="border border-gray-400 dark:border-gray-500 px-4 py-2"><code></p></code></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-400 dark:border-gray-500 px-4 py-2"><code><br></code></td>
+                                            <td class="border border-gray-400 dark:border-gray-500 px-4 py-2 italic">geen</td>
+                                            <td class="border border-gray-400 dark:border-gray-500 px-4 py-2 italic">geen</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="mt-2"><strong>Opmerking:</strong> Sommige HTML-elementen hebben geen inhoud (zoals het <code><br></code>-element). Deze elementen worden lege elementen genoemd. Lege elementen hebben geen eind-tag!</p>
+
+                            <h4 class="text-lg font-semibold mt-4">Geneste HTML Elementen</h4>
+                            <p>HTML-elementen kunnen worden genest (dit betekent dat elementen andere elementen kunnen bevatten). Alle HTML-documenten bestaan uit geneste HTML-elementen.</p>
+                            <pre class="modern-code"><code class="language-html"><!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+</body>
+</html>
+</code></pre>
+                            <p>Het <code><html></code>-element is het root-element. Daarin zit het <code><body></code>-element, en daarin zitten weer de <code><h1></code>- en <code><p></code>-elementen.</p>
+
+                            <h4 class="text-lg font-semibold mt-4">Sla de eind-tag nooit over</h4>
+                            <p>Hoewel sommige elementen correct kunnen worden weergegeven zonder eind-tag, moet je hier nooit op vertrouwen. Het kan onverwachte resultaten en fouten veroorzaken.</p>
+
+                            <h4 class="text-lg font-semibold mt-4">HTML is niet hoofdlettergevoelig</h4>
+                            <p>HTML-tags zijn niet hoofdlettergevoelig: <code><P></code> betekent hetzelfde als <code><p></code>. De W3C-standaard raadt echter aan om kleine letters te gebruiken.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-medium">HTML Attributen</h3>
+                            <div class="space-y-4">
+                                <p>HTML-attributen bieden aanvullende informatie over HTML-elementen.</p>
+                                <ul class="list-disc list-inside">
+                                    <li>Alle HTML-elementen kunnen <strong>attributen</strong> hebben</li>
+                                    <li>Attributen bieden <strong>aanvullende informatie</strong> over elementen</li>
+                                    <li>Attributen worden altijd gespecificeerd in <strong>de start-tag</strong></li>
+                                    <li>Attributen komen meestal in naam/waarde-paren zoals: <strong>naam="waarde"</strong></li>
+                                </ul>
+
+                                <h4 class="text-lg font-semibold pt-2">The href Attribute</h4>
+                                <p>De <code><a></code>-tag definieert een hyperlink. Het <code>href</code>-attribuut specificeert de URL van de pagina waar de link naartoe gaat:</p>
+                                <pre class="modern-code"><code class="language-html"><a href="https://www.w3schools.com">Visit W3Schools</a></code></pre>
+
+                                <h4 class="text-lg font-semibold pt-2">The src Attribute</h4>
+                                <p>De <code><img></code>-tag wordt gebruikt om een afbeelding in een HTML-pagina in te sluiten. Het <code>src</code>-attribuut specificeert het pad naar de weer te geven afbeelding:</p>
+                                <pre class="modern-code"><code class="language-html"><img src="img_girl.jpg"></code></pre>
+                                <p>Er zijn twee manieren om de URL in het <code>src</code>-attribuut te specificeren:</p>
+                                <ol class="list-decimal list-inside">
+                                    <li><strong>Absolute URL</strong> - Linkt naar een externe afbeelding die op een andere website wordt gehost. Voorbeeld: <code>src="https://www.w3schools.com/images/img_girl.jpg"</code>.</li>
+                                    <li><strong>Relatieve URL</strong> - Linkt naar een afbeelding die binnen de website wordt gehost. Het is bijna altijd het beste om relatieve URL's te gebruiken. Ze zullen niet breken als je van domein verandert.</li>
+                                </ol>
+
+                                <h4 class="text-lg font-semibold pt-2">The width and height Attributes</h4>
+                                <p>De <code><img></code>-tag moet ook de <code>width</code>- en <code>height</code>-attributen bevatten, die de breedte en hoogte van de afbeelding specificeren (in pixels):</p>
+                                <pre class="modern-code"><code class="language-html"><img src="img_girl.jpg" width="500" height="600"></code></pre>
+
+                                <h4 class="text-lg font-semibold pt-2">The alt Attribute</h4>
+                                <p>Het vereiste <code>alt</code>-attribuut voor de <code><img></code>-tag specificeert een alternatieve tekst voor een afbeelding, als de afbeelding om de een of andere reden niet kan worden weergegeven.</p>
+                                <pre class="modern-code"><code class="language-html"><img src="img_girl.jpg" alt="Girl with a jacket"></code></pre>
+
+                                <h4 class="text-lg font-semibold pt-2">The style Attribute</h4>
+                                <p>Het <code>style</code>-attribuut wordt gebruikt om stijlen aan een element toe te voegen, zoals kleur, lettertype, grootte en meer.</p>
+                                <pre class="modern-code"><code class="language-html"><p style="color:red;">This is a red paragraph.</p></code></pre>
+                                <div class="space-y-4 mt-4">
+                                    <h5 class="text-md font-semibold pt-2">The HTML Style Attribute</h5>
+                                    <p>Het instellen van de stijl van een HTML-element kan worden gedaan met het <code>style</code>-attribuut. De syntaxis is: <code><tagname style="property:value;"></code>. De <code>property</code> is een CSS-eigenschap en de <code>value</code> is een CSS-waarde.</p>
+                                    <h5 class="text-md font-semibold pt-2">Background Color</h5>
+                                    <p>De CSS <code>background-color</code> eigenschap definieert de achtergrondkleur voor een HTML-element.</p>
+                                    <pre class="modern-code"><code class="language-html"><body style="background-color:powderblue;">
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+</body></code></pre>
+                                    <h5 class="text-md font-semibold pt-2">Text Color</h5>
+                                    <p>De CSS <code>color</code> eigenschap definieert de tekstkleur voor een HTML-element:</p>
+                                    <pre class="modern-code"><code class="language-html"><h1 style="color:blue;">This is a heading</h1>
+<p style="color:red;">This is a paragraph.</p></code></pre>
+                                    <h5 class="text-md font-semibold pt-2">Fonts</h5>
+                                    <p>De CSS <code>font-family</code> eigenschap definieert het lettertype dat voor een HTML-element wordt gebruikt:</p>
+                                    <pre class="modern-code"><code class="language-html"><h1 style="font-family:verdana;">This is a heading</h1>
+<p style="font-family:courier;">This is a paragraph.</p></code></pre>
+                                    <h5 class="text-md font-semibold pt-2">Text Size</h5>
+                                    <p>De CSS <code>font-size</code> eigenschap definieert de tekstgrootte voor een HTML-element:</p>
+                                    <pre class="modern-code"><code class="language-html"><h1 style="font-size:300%;">This is a heading</h1>
+<p style="font-size:160%;">This is a paragraph.</p></code></pre>
+                                    <h5 class="text-md font-semibold pt-2">Text Alignment</h5>
+                                    <p>De CSS <code>text-align</code> eigenschap definieert de horizontale tekstuitlijning voor een HTML-element:</p>
+                                    <pre class="modern-code"><code class="language-html"><h1 style="text-align:center;">Centered Heading</h1>
+<p style="text-align:center;">Centered paragraph.</p></code></pre>
+                                </div>
+
+                                <h4 class="text-lg font-semibold pt-2">The lang Attribute</h4>
+                                <p>Je moet altijd het <code>lang</code>-attribuut in de <code><html></code>-tag opnemen om de taal van de webpagina te declareren. Dit is bedoeld om zoekmachines en browsers te helpen.</p>
+                                <pre class="modern-code"><code class="language-html"><!DOCTYPE html>
+<html lang="en-US">
+<body>
+...
+</body>
+</html>
+</code></pre>
+
+                                <h4 class="text-lg font-semibold pt-2">The title Attribute</h4>
+                                <p>Het <code>title</code>-attribuut definieert wat extra informatie over een element. De waarde van het title-attribuut wordt weergegeven als een tooltip wanneer je met de muis over het element beweegt:</p>
+                                <pre class="modern-code"><code class="language-html"><p title="I'm a tooltip">This is a paragraph.</p></code></pre>
+
+                                <h4 class="text-lg font-semibold pt-2">Suggesties</h4>
+                                <ul class="list-disc list-inside">
+                                    <li><strong>Gebruik altijd kleine letters voor attributen:</strong> De W3C beveelt dit aan.</li>
+                                    <li><strong>Gebruik altijd aanhalingstekens rond attribuutwaarden:</strong> Dit voorkomt fouten, vooral als de waarde spaties bevat. Dubbele aanhalingstekens zijn het meest gebruikelijk, maar enkele aanhalingstekens zijn ook toegestaan.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-medium">23. TIP: Mozilla Developer Network (MDN)</h3>
+                            <p>MDN Web Docs is de allerbelangrijkste bron voor elke webontwikkelaar. Het is een open-source, community-gedreven wiki met documentatie over webstandaarden zoals HTML, CSS en JavaScript. Je vindt er gedetailleerde uitleg, praktische voorbeelden en browsercompatibiliteitstabellen.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">24. Paragraph Elements</h3>
+                            <p>Het <code><p></code> element wordt gebruikt om een paragraaf tekst te definiëren. Browsers voegen standaard een verticale marge toe boven en onder paragrafen, waardoor ze visueel van elkaar worden gescheiden. Gebruik dit element voor blokken tekst.</p>
+                            <pre class="modern-code"><code class="language-html"><p>Dit is een paragraaf met wat tekst.</p>
+<p>Dit is nog een paragraaf.</p>
+</code></pre>
+                            <div class="space-y-4 mt-4">
+                                <h4 class="text-lg font-semibold pt-2">HTML Display</h4>
+                                <p>Je kunt er niet zeker van zijn hoe HTML zal worden weergegeven. Grote of kleine schermen en van grootte veranderde vensters zullen verschillende resultaten opleveren. Met HTML kun je de weergave niet veranderen door extra spaties of extra regels in je HTML-code toe te voegen. De browser zal automatisch alle extra spaties en regels verwijderen wanneer de pagina wordt weergegeven:</p>
+                                <pre class="modern-code"><code class="language-html"><p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser
+ignores it.
+</p>
+
+<p>
+This paragraph
+contains      a lot of spaces
+in the source    code,
+but the   browser
+ignores it.
+</p>
+</code></pre>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">25. Heading Elements</h3>
+                            <p>HTML biedt zes niveaus van koppen, van <code><h1></code> (de belangrijkste) tot <code><h6></code> (de minst belangrijke). Gebruik deze hiërarchisch om de structuur van je content aan te geven; dit is cruciaal voor SEO en toegankelijkheid. Gebruik per pagina bij voorkeur maar één <code><h1></code>.</p>
+                            <pre class="modern-code"><code class="language-html"><h1>Hoofdtitel</h1>
+<h2>Subtitel</h2>
+<h3>Onderwerp binnen subtitel</h3>
+</code></pre>
+                            <div class="space-y-4 mt-4">
+                                <p>HTML-koppen zijn titels of ondertitels die je op een webpagina wilt weergegeven.</p>
+                                <div class="mt-2 p-4 border border-dashed border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50">
+                                    <h1>Heading 1</h1>
+                                    <h2>Heading 2</h2>
+                                    <h3>Heading 3</h3>
+                                    <h4>Heading 4</h4>
+                                    <h5>Heading 5</h5>
+                                    <h6>Heading 6</h6>
+                                </div>
+                                <p>HTML-koppen worden gedefinieerd met de <code><h1></code> tot <code><h6></code> tags. <code><h1></code> definieert de belangrijkste kop. <code><h6></code> definieert de minst belangrijke kop.</p>
+                                <p><strong>Opmerking:</strong> Browsers voegen automatisch wat witruimte (een marge) toe voor en na een kop.</p>
+                                <h4 class="text-lg font-semibold pt-2">Koppen zijn belangrijk</h4>
+                                <p>Zoekmachines gebruiken de koppen om de structuur en inhoud van je webpagina's te indexeren. Gebruikers scannen een pagina vaak op basis van de koppen. Het is belangrijk om koppen te gebruiken om de documentstructuur weer te geven.</p>
+                                <p><strong>Opmerking:</strong> Gebruik HTML-koppen alleen voor koppen. Gebruik geen koppen om tekst GROOT of vet te maken.</p>
+                                <h4 class="text-lg font-semibold pt-2">Grotere Koppen</h4>
+                                <p>Elke HTML-kop heeft een standaardgrootte. Je kunt echter de grootte voor elke kop specificeren met het <code>style</code>-attribuut, met behulp van de CSS <code>font-size</code> eigenschap:</p>
+                                <pre class="modern-code"><code class="language-html"><h1 style="font-size:60px;">Heading 1</h1></code></pre>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">Codeeroefening 1: Pangolin Practice</h3>
+                            <div class="mt-2 p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
+                                <h4 class="text-lg font-semibold">Opdracht:</h4>
+                                <p class="mt-2">Maak een eenvoudige pagina over het schubdier (pangolin). De pagina moet een hoofdtitel, een subtitel en twee paragrafen bevatten.</p>
+                                <ol class="list-decimal list-inside mt-2 space-y-1">
+                                    <li>Gebruik een <code><h1></code> voor de hoofdtitel: "Het Schubdier".</li>
+                                    <li>Gebruik een <code><h2></code> voor een subtitel: "Een uniek zoogdier".</li>
+                                    <li>Voeg een eerste paragraaf (<code><p></code>) toe met een korte beschrijving van het dier.</li>
+                                    <li>Voeg een tweede paragraaf (<code><p></code>) toe over waarom ze bedreigd zijn.</li>
+                                </ol>
+                                <h4 class="text-lg font-semibold mt-4">Code Oplossing:</h4>
+                                <pre class="modern-code"><code class="language-html"><!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Het Schubdier</title>
+</head>
+<body>
+    <h1>Het Schubdier</h1>
+    <h2>Een uniek zoogdier</h2>
+    <p>Het schubdier, ook wel pangolin genoemd, is het enige zoogdier dat volledig bedekt is met schubben. Ze gebruiken deze schubben als bescherming tegen roofdieren.</p>
+    <p>Helaas zijn schubdieren een van de meest verhandelde dieren ter wereld, wat hen ernstig met uitsterven bedreigt.</p>
+</body>
+</html>
+</code></pre>
+                                <h4 class="text-lg font-semibold mt-4">Live Voorbeeld:</h4>
+                                <div class="mt-2 p-4 border border-dashed border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50">
+                                    <h1>Het Schubdier</h1>
+                                    <h2>Een uniek zoogdier</h2>
+                                    <p>Het schubdier, ook wel pangolin genoemd, is het enige zoogdier dat volledig bedekt is met schubben. Ze gebruiken deze schubben als bescherming tegen roofdieren.</p>
+                                    <p>Helaas zijn schubdieren een van de meest verhandelde dieren ter wereld, wat hen ernstig met uitsterven bedreigt.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">26. Introduction to the Chrome Inspector</h3>
+                            <p>De Chrome Inspector (of DevTools in andere browsers) is een essentieel hulpmiddel. Je kunt er de HTML en CSS van elke website live mee bekijken en aanpassen, fouten opsporen en de prestaties analyseren.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">27. HTML Boilerplate</h3>
+                            <p>De 'boilerplate' is de standaard startcode voor elke pagina. De <code><meta charset="UTF-8"></code> tag zorgt voor correcte weergave van tekens, en <code><meta name="viewport" ...></code> is essentieel voor responsive design.</p>
+                            <pre class="modern-code"><code class="language-html"><!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Titel</title>
+  </head>
+  <body>
+    <!-- Jouw content komt hier -->
+  </body>
+</html>
+</code></pre>
+                            <div class="space-y-4 mt-4">
+                                <h4 class="text-lg font-semibold pt-2">HTML Page Title</h4>
+                                <p>Every web page should have a page title to describe the meaning of the page. The <code><title></code> element adds a title to your page:</p>
+                                <pre class="modern-code"><code class="language-html"><!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Tutorial</title>
+</head>
+<body>
+The content of the document......
+</body>
+</html>
+</code></pre>
+                                <h5 class="text-md font-semibold pt-2">What is a Good Title?</h5>
+                                <p>The page title is very important for search engine optimization (SEO). The text is used by search engine algorithms to decide the order when listing pages in search results. The <code><title></code> element:</p>
+                                <ul class="list-disc list-inside">
+                                    <li>defines a title in the browser toolbar</li>
+                                    <li>provides a title for the page when it is added to favorites</li>
+                                    <li>displays a title for the page in search engine-results</li>
+                                </ul>
+                                <p>So, try to make the title as accurate and meaningful as possible!</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">28. VSCode Tip: Auto-format</h3>
+                            <p>Moderne code-editors zoals VSCode hebben functies om je code automatisch netjes op te maken, wat de leesbaarheid enorm verbetert.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">29. List Elements</h3>
+                            <p>Gebruik een ongeordende lijst <code><ul></code> voor items zonder specifieke volgorde, en een geordende lijst <code><ol></code> voor items waar de volgorde wel van belang is. Elk lijstitem wordt gedefinieerd met <code><li></code>.</p>
+                            <pre class="modern-code"><code class="language-html"><h4>Boodschappenlijst</h4>
+<ul>
+  <li>Koffie</li>
+  <li>Thee</li>
+</ul>
+
+<h4>Instructies</h4>
+<ol>
+  <li>Stap één</li>
+  <li>Stap twee</li>
+</ol>
+</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">Codeeroefening 2: Favorite Movies Exercises</h3>
+                            <div class="mt-2 p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
+                                <h4 class="text-lg font-semibold">Opdracht:</h4>
+                                <p class="mt-2">Maak een pagina met een top 3 van je favoriete films

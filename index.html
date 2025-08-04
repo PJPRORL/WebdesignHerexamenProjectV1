@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="nl" class="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Interactieve Gids voor HTML & CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    
+    <!-- highlight.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    <div id="app" class="flex flex-col min-h-screen">
+        <!-- Header & Navigation -->
+        <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50 transition-colors duration-300">
+            <nav class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center">
+                        <a href="index.html" class="font-bold text-xl text-blue-600 dark:text-blue-400">Interactieve Gids</a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-4">
+                        <a href="html-fundamentals.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">HTML Fundamenten</a>
+                        <a href="html5.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">HTML5</a>
+                        <a href="tables-forms.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Tabellen & Formulieren</a>
+                        <a href="css-basics.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">CSS Basis</a>
+                        <a href="css-layout.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">CSS Layout</a>
+                        <a href="bootstrap.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Bootstrap</a>
+                        <a href="praktische-oefen-voorbeelden.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Praktische Oefen Voorbeelden</a>
+                    </div>
+                    <div class="flex items-center">
+                        <button id="theme-toggle" class="p-2 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none" aria-label="Toggle theme">
+                            <svg id="theme-icon-light" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                            <svg id="theme-icon-dark" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+            <div class="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow-lg transition-colors duration-300">
+                <h1 class="text-3xl sm:text-4xl font-bold mb-6 text-center text-blue-600 dark:text-blue-400">Interactieve Gids voor HTML & CSS</h1>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                    <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow transition-colors duration-300">
+                        <h2 class="text-xl font-semibold mb-3 text-blue-600 dark:text-blue-400">HTML Fundamenten</h2>
+                        <p class="mb-4">Leer de basisprincipes van HTML, inclusief elementen, attributen, afbeeldingen en links.</p>
+                        <a href="html-fundamentals.html" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Bekijk →</a>
+                    </div>
+                    
+                    <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow transition-colors duration-300">
+                        <h2 class="text-xl font-semibold mb-3 text-blue-600 dark:text-blue-400">HTML5</h2>
+                        <p class="mb-4">Ontdek de nieuwe semantische elementen van HTML5 en hoe je deze effectief kunt gebruiken.</p>
+                        <a href="html5.html" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Bekijk →</a>
+                    </div>
+                    
+                    <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow transition-colors duration-300">
+                        <h2 class="text-xl font-semibold mb-3 text-blue-600 dark:text-blue-400">Tabellen & Formulieren</h2>
+                        <p class="mb-4">Leer hoe je gegevens structureert met tabellen en gebruikersinvoer verzamelt met formulieren.</p>
+                        <a href="tables-forms.html" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">Bekijk →</a>
+                    </div>
+                    
+                    <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow transition-colors duration-300">
+                        <h2 class="text-xl font-semibold mb-3 text-green-600 dark:text-green-400">CSS Basis</h2>
+                        <p class="mb-4">Begrijp de basis van CSS, inclusief kleuren, typografie en selectors.</p>
+                        <a href="css-basics.html" class="text-green-600 dark:text-green-400 hover:underline font-medium">Bekijk →</a>
+                    </div>
+                    
+                    <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow transition-colors duration-300">
+                        <h2 class="text-xl font-semibold mb-3 text-green-600 dark:text-green-400">CSS Layout</h2>
+                        <p class="mb-4">Beheers CSS-layouttechnieken zoals Flexbox en responsive design.</p>
+                        <a href="css-layout.html" class="text-green-600 dark:text-green-400 hover:underline font-medium">Bekijk →</a>
+                    </div>
+                    
+                    <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow transition-colors duration-300">
+                        <h2 class="text-xl font-semibold mb-3 text-green-600 dark:text-green-400">Bootstrap</h2>
+                        <p class="mb-4">Gebruik het populaire CSS-framework voor snelle, responsive websites.</p>
+                        <a href="bootstrap.html" class="text-green-600 dark:text-green-400 hover:underline font-medium">Bekijk →</a>
+                    </div>
+                </div>
+                
+                <div class="mt-12 p-6 bg-blue-50 dark:bg-blue-900/30 rounded-lg transition-colors duration-300">
+                    <h2 class="text-2xl font-semibold mb-4">Over deze gids</h2>
+                    <p class="mb-3">Deze interactieve gids is ontworpen om je te helpen de fundamentele concepten van HTML en CSS te leren en te begrijpen. De inhoud is gestructureerd in logische secties die je stap voor stap door de wereld van webdevelopment leiden.</p>
+                    <p>Of je nu een beginner bent of je kennis wilt opfrissen, deze gids biedt duidelijke uitleg, praktische voorbeelden en codeeroefeningen om je leerervaring te verbeteren.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white dark:bg-gray-800 shadow-inner mt-auto transition-colors duration-300">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center text-gray-600 dark:text-gray-400 text-sm">
+                &copy; 2024 Interactieve Gids. Gemaakt met ❤️.
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeIconLight = document.getElementById('theme-icon-light');
+            const themeIconDark = document.getElementById('theme-icon-dark');
+
+            // Apply syntax highlighting
+            hljs.highlightAll();
+
+            // Function to update icons visibility
+            const updateIcons = (isDark) => {
+                if (isDark) {
+                    themeIconLight.classList.remove('hidden');
+                    themeIconDark.classList.add('hidden');
+                } else {
+                    themeIconLight.classList.add('hidden');
+                    themeIconDark.classList.remove('hidden');
+                }
+            };
+
+            // Function to apply theme
+            const applyTheme = (isDark) => {
+                if (isDark) {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.classList.remove('light');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.classList.add('light');
+                }
+                updateIcons(isDark);
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            };
+
+            // Initialize theme based on saved preference or system preference
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                applyTheme(savedTheme === 'dark');
+            } else {
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                applyTheme(prefersDark);
+            }
+
+            // Toggle theme on button click
+            themeToggleBtn.addEventListener('click', () => {
+                const isDark = document.documentElement.classList.contains('dark');
+                applyTheme(!isDark);
+            });
+        });
+    </script>
+</body>
+</html>
