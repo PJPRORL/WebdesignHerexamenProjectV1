@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="nl" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout - Interactieve Gids</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- highlight.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    <div id="app" class="flex flex-col min-h-screen">
+        <!-- Header & Navigation -->
+        <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50 transition-colors duration-300">
+            <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center">
+                        <a href="index.html" class="font-bold text-xl text-blue-600 dark:text-blue-400">Interactieve Gids</a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-4">
+                        <a href="html-fundamentals.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">HTML Fundamenten</a>
+                        <a href="html5.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">HTML5</a>
+                        <a href="tables-forms.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Tabellen & Formulieren</a>
+                        <a href="css-basics.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">CSS Basis</a>
+                        <a href="css-layout.html" class="px-3 py-2 rounded-md text-sm font-medium bg-gray-200 dark:bg-gray-700 text-green-600 dark:text-green-400">CSS Layout</a>
+                        <a href="bootstrap.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Bootstrap</a>
+                    </div>
+                    <div class="flex items-center">
+                        <button id="theme-toggle" class="p-2 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none">
+                            <svg id="theme-icon-light" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                            <svg id="theme-icon-dark" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+            <div class="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow-lg transition-colors duration-300">
+                <h1 class="text-3xl sm:text-4xl font-bold mb-2 text-green-600 dark:text-green-400">CSS Layout</h1>
+                <p class="mb-8 text-lg text-gray-600 dark:text-gray-300">Responsive design en moderne layout technieken.</p>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-green-500 pb-2">Hoofdstuk: The CSS Box Model</h2>
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-medium">85-88. Box Model Properties</h3>
+                            <p>Elk HTML-element kan worden gezien als een doos. Het box model beschrijft de opbouw van deze doos: de content zelf, <code>padding</code> (de ruimte binnen de rand), <code>border</code> (de rand zelf), en <code>margin</code> (de ruimte buiten de rand). Standaard beïnvloeden padding en border de totale grootte van de doos. Het is een best practice om <code>box-sizing: border-box;</code> te gebruiken, zodat de opgegeven <code>width</code> en <code>height</code> inclusief padding en border zijn, wat de layout veel intuïtiever maakt.</p>
+                            <pre class="modern-code"><code class="language-css">.box {
+  box-sizing: border-box; /* Zeer aanbevolen! */
+  width: 300px; /* Totale breedte is nu 300px */
+  height: 150px;
+  
+  padding: 20px; /* Ruimte binnen de border */
+  
+  border: 5px solid navy;
+  border-radius: 10px; /* Afgeronde hoeken */
+  
+  margin: 25px; /* Ruimte buiten de border */
+}
+</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">89. The Display Property</h3>
+                            <p>De <code>display</code> eigenschap bepaalt het buitenste en binnenste display-type van een element. Het beïnvloedt de layout fundamenteel.</p>
+                            <ul class="list-disc list-inside ml-4">
+                                <li><code>block</code>: Begint op een nieuwe regel, neemt de volledige breedte in.</li>
+                                <li><code>inline</code>: Begint niet op een nieuwe regel, neemt alleen de benodigde breedte in. <code>width</code> en <code>height</code> werken niet.</li>
+                                <li><code>inline-block</code>: Zoals inline, maar <code>width</code>, <code>height</code> en verticale margins/paddings werken wel.</li>
+                                <li><code>none</code>: Het element wordt helemaal niet weergegeven en neemt geen ruimte in.</li>
+                                <li><code>flex</code> en <code>grid</code>: Maken van een element een container voor respectievelijk een flexbox- of grid-layout, wat krachtige manieren zijn om complexe layouts te bouwen.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">91-92. CSS Units: em & rem</h3>
+                            <p><b>px (pixels)</b> zijn absolute eenheden. <b>em</b> en <b>rem</b> zijn relatieve eenheden, wat beter is voor schaalbaarheid en toegankelijkheid.</p>
+                            <ul class="list-disc list-inside ml-4">
+                                <li><code>em</code>: Relatief aan de font-size van het <b>directe parent</b> element. Dit kan leiden tot onverwachte resultaten bij diep geneste elementen.</li>
+                                <li><code>rem</code> (root em): Relatief aan de font-size van het <b>root</b> (<code><html></code>) element. Dit is veel voorspelbaarder en wordt sterk aanbevolen voor het instellen van font-sizes, margins en paddings. Als een gebruiker zijn standaard lettergrootte in de browser aanpast, schaalt de hele layout mee.</li>
+                            </ul>
+                            <pre class="modern-code"><code class="language-css">html {
+  font-size: 16px;
+}
+
+.parent {
+  font-size: 20px;
+}
+
+.child-em {
+  font-size: 1.5em; /* 1.5 * 20px = 30px */
+}
+
+.child-rem {
+  font-size: 1.5rem; /* 1.5 * 16px = 24px */
+}
+</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-green-500 pb-2">Hoofdstuk: Other assorted useful CSS properties</h2>
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-medium">94. Opacity & The Alpha Channel</h3>
+                            <p><code>opacity</code> maakt een heel element doorzichtig, inclusief alle kind-elementen zoals tekst. De waarde gaat van 0 (volledig onzichtbaar) tot 1 (volledig zichtbaar). Het alpha-kanaal in <code>rgba()</code> of <code>hsla()</code> maakt alleen de kleur zelf doorzichtig, terwijl de content van het element (zoals tekst) volledig dekkend blijft. Dit is ideaal voor het creëren van overlays of doorzichtige achtergronden.</p>
+                            <pre class="modern-code"><code class="language-css">.transparent-box {
+  opacity: 0.5; /* Element en tekst zijn 50% doorzichtig */
+}
+
+.semi-transparent-background {
+  /* Alleen de achtergrond is 50% doorzichtig, tekst niet */
+  background-color: rgba(0, 0, 255, 0.5); /* Blauw met 50% alpha */
+}
+</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">95. The Position Property</h3>
+                            <p>Hiermee kun je de standaard positionering van een element doorbreken. De coördinaten (<code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>) werken alleen op gepositioneerde elementen.</p>
+                            <ul class="list-disc list-inside ml-4">
+                                <li><code>relative</code>: Het element is positioneerbaar t.o.v. zijn normale positie, maar blijft in de documentstroom.</li>
+                                <li><code>absolute</code>: Het element wordt uit de normale flow gehaald en gepositioneerd t.o.v. zijn dichtstbijzijnde gepositioneerde voorouder (een voorouder met een andere positie dan <code>static</code>).</li>
+                                <li><code>fixed</code>: Gepositioneerd t.o.v. de viewport (het browservenster). Scrolt niet mee met de pagina. Ideaal voor vaste headers of "terug naar boven"-knoppen.</li>
+                                <li><code>sticky</code>: Een mix van relative en fixed. Gedraagt zich als <code>relative</code> totdat het een bepaalde scrollpositie bereikt, dan wordt het <code>fixed</code>. Perfect voor navigatiebalken.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">96-98. Transitions & Transforms</h3>
+                            <p><code>transition</code> zorgt voor een geleidelijke animatie van een eigenschap wanneer deze verandert (bv. bij <code>:hover</code>). Je specificeert welke eigenschap, de duur, en de timing-functie (bv. <code>ease-in-out</code>). <code>transform</code> verandert de vorm, grootte of positie van een element zonder de omliggende elementen te beïnvloeden. Veelvoorkomende transformaties zijn <code>scale()</code>, <code>rotate()</code>, <code>translate()</code> (verplaatsen), en <code>skew()</code> (vervormen).</p>
+                            <pre class="modern-code"><code class="language-css">.fancy-button {
+  background-color: blue;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.fancy-button:hover {
+  background-color: darkblue;
+  transform: translateY(-5px) scale(1.05); /* Beweeg omhoog en maak groter */
+}
+</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">100. Google Fonts</h3>
+                            <p>Voeg eenvoudig honderden gratis, open-source lettertypen toe aan je site. Je kunt ze direct linken via de Google Fonts CDN (Content Delivery Network) of de lettertypebestanden downloaden en zelf hosten. Het linken via CDN is eenvoudiger en vaak sneller, omdat de kans bestaat dat een bezoeker het lettertype al in de cache van zijn browser heeft staan van een andere website.</p>
+                            <pre class="modern-code"><code class="language-css">/* Stap 1: Importeer het lettertype in je CSS (of link in HTML) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Stap 2: Gebruik het in je CSS */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-green-500 pb-2">Hoofdstuk: Responsive CSS & Flexbox</h2>
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-medium">105. What on Earth Is Flexbox?</h3>
+                            <p>Flexbox is een eendimensionaal layout-model dat een efficiënte manier biedt om items in een container uit te lijnen en te verdelen. Het is ontworpen voor het verdelen van ruimte binnen een container en voor het uitlijnen van items, en het lost veel problemen op waar oudere layout-methoden (zoals floats) mee kampten. Je activeert het met <code>display: flex;</code> op de container. Het concept draait om een flex-container en flex-items, met een hoofd-as en een dwars-as.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">106-112. Core Flexbox Properties</h3>
+                            <p>De meeste eigenschappen worden op de <b>flex container</b> gezet:</p>
+                            <ul class="list-disc list-inside ml-4">
+                                <li><code>flex-direction</code>: Bepaalt de hoofd-as (<code>row</code> is horizontaal, <code>column</code> is verticaal).</li>
+                                <li><code>justify-content</code>: Uitlijning op de hoofd-as (bv. <code>flex-start</code>, <code>center</code>, <code>space-between</code>).</li>
+                                <li><code>align-items</code>: Uitlijning op de dwars-as (bv. <code>flex-start</code>, <code>center</code>, <code>stretch</code>).</li>
+                                <li><code>flex-wrap</code>: Bepaalt of items naar een volgende regel mogen springen.</li>
+                            </ul>
+                            <p class="mt-2">Op de <b>flex items</b> zelf kun je eigenschappen als <code>flex-grow</code> (hoeveel een item mag groeien), <code>flex-shrink</code> (hoeveel het mag krimpen) en <code>align-self</code> (individuele uitlijning op de dwars-as) toepassen.</p>
+                            <pre class="modern-code"><code class="language-css">.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Items horizontaal centreren */
+  align-items: center; /* Items verticaal centreren */
+  height: 200px;
+  background-color: #ddd;
+}
+</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">113-114. Responsive Design & Media Queries</h3>
+                            <p>Responsive design zorgt ervoor dat je layout er goed uitziet op alle apparaten. Media Queries zijn hier de sleutel toe. Ze passen CSS-regels toe op basis van bepaalde voorwaarden van het apparaat, meestal de breedte van de viewport. Een "mobile-first"-aanpak wordt aanbevolen: ontwerp je basisstijlen voor kleine schermen en gebruik dan media queries met <code>min-width</code> om stijlen toe te voegen of aan te passen voor grotere schermen.</p>
+                            <pre class="modern-code"><code class="language-css">.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Voor schermen die 768px of breder zijn */
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+  }
+
+  body {
+    font-size: 18px;
+  }
+}
+</code></pre>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white dark:bg-gray-800 shadow-inner mt-auto transition-colors duration-300">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center text-gray-600 dark:text-gray-400 text-sm">
+                &copy; 2024 Interactieve Gids. Gemaakt met ❤️.
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme switcher logic
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeIconLight = document.getElementById('theme-icon-light');
+            const themeIconDark = document.getElementById('theme-icon-dark');
+            
+            // Apply syntax highlighting
+            hljs.highlightAll();
+            
+            const applyTheme = (theme) => {
+                if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.classList.remove('light');
+                    themeIconLight.classList.add('hidden');
+                    themeIconDark.classList.remove('hidden');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.classList.add('light');
+                    themeIconLight.classList.remove('hidden');
+                    themeIconDark.classList.add('hidden');
+                }
+                // Store theme preference
+                localStorage.setItem('theme', theme);
+            };
+            
+            const toggleTheme = () => {
+                const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                applyTheme(newTheme);
+            };
+            
+            themeToggleBtn.addEventListener('click', toggleTheme);
+            
+            // Apply saved theme or system preference
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                applyTheme(savedTheme);
+            } else {
+                // Check system preference
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    applyTheme('dark');
+                } else {
+                    applyTheme('light');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

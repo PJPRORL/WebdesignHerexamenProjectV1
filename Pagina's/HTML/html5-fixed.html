@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="nl" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 - Interactieve Gids</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- highlight.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    <div id="app" class="flex flex-col min-h-screen">
+        <!-- Header & Navigation -->
+        <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50 transition-colors duration-300">
+            <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center">
+                        <a href="index.html" class="font-bold text-xl text-blue-600 dark:text-blue-400">Interactieve Gids</a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-4">
+                        <a href="html-fundamentals.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">HTML Fundamenten</a>
+                        <a href="html5.html" class="px-3 py-2 rounded-md text-sm font-medium bg-gray-200 dark:bg-gray-700 text-blue-600 dark:text-blue-400">HTML5</a>
+                        <a href="tables-forms.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Tabellen & Formulieren</a>
+                        <a href="css-basics.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">CSS Basis</a>
+                        <a href="css-layout.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">CSS Layout</a>
+                        <a href="bootstrap.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Bootstrap</a>
+                    </div>
+                    <div class="flex items-center">
+                        <button id="theme-toggle" class="p-2 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none">
+                            <svg id="theme-icon-light" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                            <svg id="theme-icon-dark" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+            <div class="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow-lg transition-colors duration-300">
+                <h1 class="text-3xl sm:text-4xl font-bold mb-2 text-blue-600 dark:text-blue-400">HTML5</h1>
+                <p class="mb-8 text-lg text-gray-600 dark:text-gray-300">Semantische elementen en moderne HTML-functionaliteiten.</p>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-blue-500 pb-2">Hoofdstuk: HTML5</h2>
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-medium">34. What Exactly Is HTML5?</h3>
+                            <p>HTML5 is de nieuwste evolutie van de HTML-standaard. Het introduceerde nieuwe semantische elementen (<code><article></code>, <code><footer></code>), nieuwe formulier-inputs, en API's voor complexe webapplicaties (zoals <code><video></code>, <code><audio></code>, en <code><canvas></code>).</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">35. Block vs. Inline Elements - Divs and Spans</h3>
+                            <p><b>Block-level</b> elementen (<code><div></code>, <code><p></code>) beginnen op een nieuwe regel en nemen de volledige breedte in. <b>Inline</b> elementen (<code><span></code>, <code><a></code>) passen binnen de tekststroom. <code><div></code> en <code><span></code> zijn neutrale containers voor styling.</p>
+                            <pre class="modern-code"><code class="language-html"><div style="background-color: lightblue;">Dit is een div (block).</div>
+<p>Dit is een paragraaf met een <span>span (inline)</span> erin.</p>
+</code></pre>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">36. An Odd Assortment of Elements: HR, BR, Sup, & Sub</h3>
+                            <p><code><hr></code> (horizontal rule) is een thematische onderbreking. <code><br></code> (break) forceert een regeleinde. <code><sup></code> en <code><sub></code> zijn voor superscript (X<sup>2</sup>) en subscript (H<sub>2</sub>O).</p>
+                            <div class="space-y-4 mt-4">
+                                <h4 class="text-lg font-semibold pt-2">HTML Horizontale Lijnen</h4>
+                                <p>De <code><hr></code>-tag definieert een thematische breuk op een HTML-pagina en wordt meestal weergegeven als een horizontale lijn. Het wordt gebruikt om inhoud te scheiden.</p>
+                                <pre class="modern-code"><code class="language-html"><h1>This is heading 1</h1>
+<p>This is some text.</p>
+<hr>
+<h2>This is heading 2</h2>
+<p>This is some other text.</p>
+</code></pre>
+                                <h4 class="text-lg font-semibold pt-2">HTML Regeleindes</h4>
+                                <p>Het HTML <code><br></code>-element definieert een regeleinde. Gebruik <code><br></code> als je een nieuwe regel wilt zonder een nieuwe paragraaf te beginnen.</p>
+                                <pre class="modern-code"><code class="language-html"><p>This is<br>a paragraph<br>with line breaks.</p>
+</code></pre>
+                                <h4 class="text-lg font-semibold pt-2">Het Gedicht Probleem en de Oplossing</h4>
+                                <p>Zonder extra tags zal dit gedicht op één regel worden weergegeven. De <code><pre></code> tag lost dit op door witruimte en regeleindes te behouden.</p>
+                                <pre class="modern-code"><code class="language-html"><pre>
+  My Bonnie lies over the ocean.
+
+  My Bonnie lies over the sea.
+
+  My Bonnie lies over the ocean.
+
+  Oh, bring back my Bonnie to me.
+</pre>
+</code></pre>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">37. Entity Codes</h3>
+                            <p>Gebruik entity codes om gereserveerde tekens weer te geven. Veelvoorkomende zijn <code>&amp;lt;</code> (<), <code>&amp;gt;</code> (>), en <code>&amp;copy;</code> (&copy;).</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">Codeeroefening 4: Snowman Logo Exercise</h3>
+                            <div class="mt-2 p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
+                                <h4 class="text-lg font-semibold">Opdracht:</h4>
+                                <p class="mt-2">Gebruik HTML entity codes om een eenvoudig logo te maken voor een fictief bedrijf genaamd "Frosty Creations".</p>
+                                <ol class="list-decimal list-inside mt-2 space-y-1">
+                                    <li>Maak een hoofdtitel (<code><h1></code>).</li>
+                                    <li>Plaats de tekst "Frosty Creations" in de titel.</li>
+                                    <li>Voeg direct na de tekst de HTML entity code voor een sneeuwpop (<code>&amp;#9924;</code>) toe.</li>
+                                    <li>Voeg daaronder een paragraaf toe met de tekst "Copyright © 2024". Gebruik de juiste entity code voor het copyrightsymbool.</li>
+                                </ol>
+                                <h4 class="text-lg font-semibold mt-4">Code Oplossing:</h4>
+                                <pre class="modern-code"><code class="language-html"><!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Frosty Creations</title>
+</head>
+<body>
+    <h1>Frosty Creations &amp;#9924;</h1>
+    <p>Copyright &amp;copy; 2024</p>
+</body>
+</html>
+</code></pre>
+                                <h4 class="text-lg font-semibold mt-4">Live Voorbeeld:</h4>
+                                <div class="mt-2 p-4 border border-dashed border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50">
+                                    <h1>Frosty Creations &#9924;</h1>
+                                    <p>Copyright &copy; 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">38. Intro to Semantic Markup & 39. Playing With Semantic Elements</h3>
+                            <p>Semantische elementen (<code><header></code>, <code><nav></code>, <code><main></code>, <code><article></code>, <code><section></code>, <code><footer></code>) beschrijven de betekenis van de content. Dit verbetert de leesbaarheid, toegankelijkheid en SEO.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">40. Screen Reader Demonstration</h3>
+                            <p>Een demonstratie van hoe schermlezers semantische HTML gebruiken om een pagina voor te lezen aan visueel beperkte gebruikers.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium">41. VSCode Tip: Emmet</h3>
+                            <p>Emmet is een krachtige tool in VSCode die het schrijven van HTML versnelt met behulp van afkortingen.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-blue-500 pb-2">HTML Text Formatting</h2>
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-medium">HTML Text Formatting</h3>
+                            <div class="space-y-4">
+                                <p>HTML bevat verschillende elementen voor het definiëren van tekst met een speciale betekenis.</p>
+                                <div class="mt-2 p-4 border border-dashed border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50">
+                                    <p><b>This text is bold</b></p>
+                                    <p><i>This text is italic</i></p>
+                                    <p>This is <sub>subscript</sub> and <sup>superscript</sup></p>
+                                </div>
+                                <h4 class="text-lg font-semibold pt-2">HTML Formatting Elements</h4>
+                                <p>Opmaakelementen zijn ontworpen om speciale soorten tekst weer te geven:</p>
+                                <ul class="list-disc list-inside">
+                                    <li><code><b></code> - Bold text</li>
+                                    <li><code><strong></code> - Important text</li>
+                                    <li><code><i></code> - Italic text</li>
+                                    <li><code><em></code> - Emphasized text</li>
+                                    <li><code><mark></code> - Marked text</li>
+                                    <li><code><small></code> - Smaller text</li>
+                                    <li><code><del></code> - Deleted text</li>
+                                    <li><code><ins></code> - Inserted text</li>
+                                    <li><code><sub></code> - Subscript text</li>
+                                    <li><code><sup></code> - Superscript text</li>
+                                </ul>
+                                <h4 class="text-lg font-semibold pt-2">HTML <b> en <strong> Elementen</h4>
+                                <p>Het <code><b></code>-element definieert vetgedrukte tekst, zonder extra belang. Het <code><strong></code>-element definieert tekst met grote importantie. De inhoud wordt doorgaans vet weergegeven.</p>
+                                <pre class="modern-code"><code class="language-html"><b>This text is bold</b>
+<strong>This text is important!</strong></code></pre>
+                                <h4 class="text-lg font-semibold pt-2">HTML <i> en <em> Elementen</h4>
+                                <p>Het <code><i></code>-element definieert een deel van de tekst in een alternatieve stem of stemming. De inhoud wordt doorgaans cursief weergegeven. Het <code><em></code>-element definieert benadrukte tekst. Een schermlezer zal de woorden in <code><em></code> met nadruk uitspreken.</p>
+                                <pre class="modern-code"><code class="language-html"><i>This text is italic</i>
+<em>This text is emphasized</em></code></pre>
+                                <h4 class="text-lg font-semibold pt-2">Andere Opmaakelementen</h4>
+                                <pre class="modern-code"><code class="language-html"><small>This is some smaller text.</small>
+<p>Do not forget to buy <mark>milk</mark> today.</p>
+<p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
+<p>This is <sub>subscripted</sub> text.</p>
+<p>This is <sup>superscripted</sup> text.</p></code></pre>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-medium">HTML Quotation and Citation Elements</h3>
+                            <div class="space-y-4">
+                                <p>In dit hoofdstuk behandelen we de HTML-elementen <code><blockquote></code>, <code><q></code>, <code><abbr></code>, <code><address></code>, <code><cite></code> en <code><bdo></code>.</p>
+                                <h4 class="text-lg font-semibold pt-2">HTML <blockquote> for Quotations</h4>
+                                <p>Het HTML <code><blockquote></code>-element definieert een sectie die wordt geciteerd uit een andere bron. Browsers laten <code><blockquote></code>-elementen meestal inspringen.</p>
+                                <pre class="modern-code"><code class="language-html"><p>Here is a quote from WWF's website:</p>
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
+</blockquote>
+</code></pre>
+                                <h4 class="text-lg font-semibold pt-2">HTML <q> for Short Quotations</h4>
+                                <p>De HTML <code><q></code>-tag definieert een korte aanhaling. Browsers voegen normaal gesproken aanhalingstekens toe rond de aanhaling.</p>
+                                <pre class="modern-code"><code class="language-html"><p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+</code></pre>
+                                <h4 class="text-lg font-semibold pt-2">HTML <abbr> for Abbreviations</h4>
+                                <p>De HTML <code><abbr></code>-tag definieert een afkorting of een acroniem. Gebruik het globale <code>title</code>-attribuut om de beschrijving van de afkorting te tonen.</p>
+                                <pre class="modern-code"><code class="language-html"><p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+</code></pre>
+                                <h4 class="text-lg font-semibold pt-2">HTML <address> for Contact Information</h4>
+                                <p>De HTML <code><address></code>-tag definieert de contactinformatie voor de auteur/eigenaar van een document. De tekst wordt meestal cursief weergegeven.</p>
+                                <pre class="modern-code"><code class="language-html"><address>
+Written by John Doe.<br>
+Visit us at:<br>
+Example.com<br>
+Box 564, Disneyland<br>
+USA
+</address>
+</code></pre>
+                                <h4 class="text-lg font-semibold pt-2">HTML <cite> for Work Title</h4>
+                                <p>De HTML <code><cite></code>-tag definieert de titel van een creatief werk (bijv. een boek, gedicht, film). De tekst wordt meestal cursief weergegeven.</p>
+                                <pre class="modern-code"><code class="language-html"><p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+</code></pre>
+                                <h4 class="text-lg font-semibold pt-2">HTML <bdo> for Bi-Directional Override</h4>
+                                <p>De HTML <code><bdo></code>-tag wordt gebruikt om de huidige tekstrichting te overschrijven.</p>
+                                <pre class="modern-code"><code class="language-html"><bdo dir="rtl">This text will be written from right to left</bdo>
+</code></pre>
+                                <h4 class="text-lg font-semibold pt-2">HTML Quotation and Citation Elements</h4>
+                                <div class="overflow-x-auto mt-2">
+                                    <table class="w-full text-left border-collapse modern-table">
+                                        <thead>
+                                            <tr>
+                                                <th class="border border-gray-400 dark:border-gray-500 px-4 py-2">Tag</th>
+                                                <th class="border border-gray-400 dark:border-gray-500 px-4 py-2">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2"><code><abbr></code></td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Defines an abbreviation or acronym</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2"><code><address></code></td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Defines contact information for the author/owner of a document</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2"><code><bdo></code></td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Defines the text direction</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2"><code><blockquote></code></td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Defines a section that is quoted from another source</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2"><code><cite></code></td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Defines the title of a work</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2"><code><q></code></td>
+                                                <td class="border border-gray-400 dark:border-gray-500 px-4 py-2">Defines a short inline quotation</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-medium">HTML Colors</h3>
+                            <div class="space-y-4">
+                                <p>HTML-kleuren worden gespecificeerd met voorgedefinieerde kleurnamen, of met RGB-, HEX-, HSL-, RGBA- of HSLA-waarden.</p>
+                                <h4 class="text-lg font-semibold pt-2">Color Names</h4>
+                                <p>In HTML kan een kleur worden gespecificeerd door een kleurnaam te gebruiken. HTML ondersteunt 140 standaard kleurnamen.</p>
+                                <div class="mt-2 p-4 border border-dashed border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50 text-white">
+                                    <p class="p-2 rounded" style="background-color:Tomato;">Tomato</p>
+                                    <p class="p-2 rounded mt-2" style="background-color:Orange;">Orange</p>
+                                    <p class="p-2 rounded mt-2" style="background-color:DodgerBlue;">DodgerBlue</p>
+                                    <p class="p-2 rounded mt-2" style="background-color:MediumSeaGreen;">MediumSeaGreen</p>
+                                    <p class="p-2 rounded mt-2" style="background-color:Gray;">Gray</p>
+                                    <p class="p-2 rounded mt-2" style="background-color:SlateBlue;">SlateBlue</p>
+                                    <p class="p-2 rounded mt-2" style="background-color:Violet;">Violet</p>
+                                    <p class="p-2 rounded mt-2 text-black" style="background-color:LightGray;">LightGray</p>
+                                </div>
+                                <h4 class="text-lg font-semibold pt-2">Background Color</h4>
+                                <p>Je kunt de achtergrondkleur voor HTML-elementen instellen:</p>
+                                <pre class="modern-code"><code class="language-html"><h1 style="background-color:DodgerBlue;">Hello World</h1>
+<p style="background-color:Tomato;">Lorem ipsum...</p></code></pre>
+                                <h4 class="text-lg font-semibold pt-2">Text Color</h4>
+                                <p>Je kunt de kleur van tekst instellen:</p>
+                                <pre class="modern-code"><code class="language-html"><h1 style="color:Tomato;">Hello World</h1>
+<p style="color:DodgerBlue;">Lorem ipsum...</p></code></pre>
+                                <h4 class="text-lg font-semibold pt-2">Border Color</h4>
+                                <p>Je kunt de kleur van randen instellen:</p>
+                                <pre class="modern-code"><code class="language-html"><h1 style="border:2px solid Tomato;">Hello World</h1>
+<h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+<h1 style="border:2px solid Violet;">Hello World</h1></code></pre>
+                                <h4 class="text-lg font-semibold pt-2">Color Values</h4>
+                                <p>In HTML kunnen kleuren ook worden gespecificeerd met RGB-, HEX-, HSL-, RGBA en HSLA-waarden.</p>
+                                <pre class="modern-code"><code class="language-html"><h1 style="background-color:rgb(255, 99, 71);">...</h1>
+<h1 style="background-color:#ff6347;">...</h1>
+<h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
+<h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
+<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1>
+</code></pre>
+                                <div class="space-y-4 mt-4">
+                                    <h4 class="text-lg font-semibold pt-2">RGB and RGBA Colors</h4>
+                                    <p>Een RGB-kleurwaarde vertegenwoordigt RODE, GROENE en BLAUWE lichtbronnen. Een RGBA-kleurwaarde is een uitbreiding van RGB met een Alpha-kanaal (dekking).</p>
+                                    <h5 class="text-md font-semibold pt-2">RGB Color Values</h5>
+                                    <p>In HTML kan een kleur worden gespecificeerd als een RGB-waarde, met de formule: <code>rgb(rood, groen, blauw)</code>. Elke parameter definieert de intensiteit van de kleur met een waarde tussen 0 en 255.</p>
+                                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-center text-white font-semibold">
+                                        <div class="p-4 rounded" style="background-color:rgb(255, 0, 0)">rgb(255, 0, 0)</div>
+                                        <div class="p-4 rounded" style="background-color:rgb(0, 0, 255)">rgb(0, 0, 255)</div>
+                                        <div class="p-4 rounded" style="background-color:rgb(60, 179, 113)">rgb(60, 179, 113)</div>
+                                        <div class="p-4 rounded" style="background-color:rgb(238, 130, 238)">rgb(238, 130, 238)</div>
+                                        <div class="p-4 rounded" style="background-color:rgb(255, 165, 0)">rgb(255, 165, 0)</div>
+                                        <div class="p-4 rounded" style="background-color:rgb(106, 90, 205)">rgb(106, 90, 205)</div>
+                                    </div>
+                                    <h5 class="text-md font-semibold pt-2">Shades of Gray</h5>
+                                    <p>Grijstinten worden vaak gedefinieerd met gelijke waarden voor alle drie de parameters:</p>
+                                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-center text-white font-semibold">
+                                        <div class="p-4 rounded" style="background-color:rgb(60, 60, 60)">rgb(60, 60, 60)</div>
+                                        <div class="p-4 rounded" style="background-color:rgb(100, 100, 100)">rgb(100, 100, 100)</div>
+                                        <div class="p-4 rounded" style="background-color:rgb(140, 140, 140)">rgb(140, 140, 140)</div>
+                                        <div class="p-4 rounded text-black" style="background-color:rgb(180, 180, 180)">rgb(180, 180, 180)</div>
+                                        <div class="p-4 rounded text-black" style="background-color:rgb(200, 200, 200)">rgb(200, 200, 200)</div>
+                                        <div class="p-4 rounded text-black" style="background-color:rgb(240, 240, 240)">rgb(240, 240, 240)</div>
+                                    </div>
+                                    <h5 class="text-md font-semibold pt-2">RGBA Color Values</h5>
+                                    <p>RGBA-kleurwaarden zijn een uitbreiding van RGB met een Alpha-kanaal dat de dekking specificeert. Een RGBA-kleurwaarde wordt gespecificeerd met: <code>rgba(rood, groen, blauw, alpha)</code>. De alphaparameter is een getal tussen 0.0 (volledig transparant) en 1.0 (volledig dekkend).</p>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-center text-white font-semibold">
+                                        <div class="p-4 rounded border dark:border-gray-600 text-gray-800 dark:text-gray-200" style="background-color:rgba(255, 99, 71, 0)">rgba(..., 0)</div>
+                                        <div class="p-4 rounded" style="background-color:rgba(255, 99, 71, 0.2)">rgba(..., 0.2)</div>
+                                        <div class="p-4 rounded" style="background-color:rgba(255, 99, 71, 0.4)">rgba(..., 0.4)</div>
+                                        <div class="p-4 rounded" style="background-color:rgba(255, 99, 71, 0.6)">rgba(...,
