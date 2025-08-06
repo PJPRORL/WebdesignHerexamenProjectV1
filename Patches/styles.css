@@ -1,0 +1,308 @@
+/* Custom styles */
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Custom scrollbar for a more modern look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Dark mode variations for scrollbars */
+.dark ::-webkit-scrollbar-track {
+    background: #2d3748;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #4a5568;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #718096;
+}
+
+/* ==========================================================================
+   Theme variables and global styling
+   These CSS custom properties define colours used throughout the site.
+   Switching between dark and light themes happens by toggling `.dark` or
+   `.light` classes on the <html> element (see JavaScript in the pages).
+   The variables set background, text and link colours so the entire page
+   responds to theme changes. Code blocks remain dark irrespective of theme.
+   ========================================================================== */
+html.light {
+    --bg-color: #ffffff;
+    --text-color: #1f2937;
+    --link-color: #2563eb;
+    --link-hover-color: #1e40af;
+    --header-bg-color: #f9fafb;
+    --footer-bg-color: #f9fafb;
+    --border-color: #e5e7eb;
+}
+
+html.dark {
+    --bg-color: #1a202c;
+    --text-color: #e5e7eb;
+    --link-color: #63b3ed;
+    --link-hover-color: #90cdf4;
+    --header-bg-color: #111827;
+    --footer-bg-color: #1f2937;
+    --border-color: #4b5563;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* Fixed code block styling.
+ * Code examples should always have a dark background to aid readability.
+ * We intentionally apply the dark colours to both light and dark themes.
+ */
+pre.modern-code {
+    background: #282c34 !important;
+    color: #d1fae5 !important;
+    border-radius: 0.5rem;
+    padding: 1.25em;
+    font-size: 1em;
+    font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5em;
+    overflow-x: auto;
+}
+
+/* Override any light or dark theme variations to ensure code blocks remain dark */
+.light pre.modern-code,
+.dark pre.modern-code {
+    background: #282c34 !important;
+    color: #d1fae5 !important;
+}
+
+/* Section styling */
+.section-modern {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.07);
+    padding: 2.5rem 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.dark .section-modern {
+    background: #1f2937;
+}
+
+/* Typography improvements */
+h1, h2, h3, h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-top: 2rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+h3 {
+    font-size: 1.375rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.dark h2 {
+    border-color: #4b5563;
+}
+
+/* Modern table styles */
+table.modern-table {
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    border: 1.5px solid #d1d5db;
+    margin-bottom: 2rem;
+    background: white;
+}
+
+.dark table.modern-table {
+    border: 1.5px solid #4b5563;
+    background: #1f2937;
+}
+
+table.modern-table th {
+    background: #f3f4f6;
+    color: #1e293b;
+    font-weight: 700;
+    padding: 0.75em 1.25em;
+    border-bottom: 2px solid #d1d5db;
+}
+
+.dark table.modern-table th {
+    background: #111827;
+    color: #f3f4f6;
+    border-bottom: 2px solid #4b5563;
+}
+
+table.modern-table td {
+    padding: 0.75em 1.25em;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.dark table.modern-table td {
+    border-bottom: 1px solid #4b5563;
+}
+
+table.modern-table tr:last-child td {
+    border-bottom: none;
+}
+
+table.modern-table tr:nth-child(even) td {
+    background: #f9fafb;
+}
+
+.dark table.modern-table tr:nth-child(even) td {
+    background: #111827;
+}
+
+table.modern-table tr:hover td {
+    background: #e0e7ef;
+}
+
+.dark table.modern-table tr:hover td {
+    background: #374151;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .section-modern {
+        padding: 1.25rem 0.5rem;
+    }
+
+    table.modern-table th,
+    table.modern-table td {
+        padding: 0.5em 0.5em;
+    }
+
+    pre.modern-code {
+        padding: 0.75em;
+        font-size: 0.95em;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Layout enhancements: make sections stand out with subtle card styling.
+   This improves readability and provides consistent spacing across pages. */
+main {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+}
+
+section {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Give the navigation, header and footer a background and border that
+   responds to theme changes. These selectors are broad enough to catch
+   existing markup without requiring structural changes in HTML files. */
+nav {
+    background-color: var(--header-bg-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem;
+}
+
+header {
+    background-color: var(--header-bg-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem;
+}
+
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--text-color);
+    border-top: 1px solid var(--border-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Style tables consistently across themes using existing .modern-table rules.
+   Add border colour variable usage for light and dark modes. */
+table.modern-table {
+    border-color: var(--border-color);
+}
+
+.dark table.modern-table {
+    border-color: var(--border-color);
+}
+
+/* Fixed-position theme toggle button. This ensures the button is visible on all
+   pages regardless of the underlying layout. It floats in the top-right
+   corner and adapts to the current theme colours via CSS variables. */
+#theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#theme-toggle svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
